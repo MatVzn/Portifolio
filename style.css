@@ -59,12 +59,12 @@ header button {
   background: none;
   
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--primary-color);
 
   /* TRANSITION FOR HOVER BUTTONS */
-  text-decoration: underline transparent 3px;
-  transition: color .3s, text-decoration .3s;
+  text-decoration: underline transparent 2px;
+  transition: color .3s, text-decoration .3s, transform .3s;
 }
 
 header button ion-icon {
@@ -80,7 +80,8 @@ header button ion-icon {
 
 header button:hover {
   cursor: pointer;
-  text-decoration: underline var(--secondary-color) 3px;
+  text-decoration: underline var(--secondary-color) 2px;
+  transform: scale(1.1);
 }
 
 header ion-icon:hover {
