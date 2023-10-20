@@ -9,7 +9,7 @@
   --bg-primary-color: #222831;
   --bg-secondary-color: #393E46;
   --primary-color: #EEEEEE;
-  --secondary-color: #00ADB5;
+  --secondary-color: #5ed881;
 }
 
 /* GERAL */
@@ -34,8 +34,15 @@ header h1 {
   align-items: center;
   gap: 10px;
 
-  font-weight: 600;
+  font-weight: 500;
   font-size: 38px;
+
+  transition: transform .3s;
+}
+
+header h1:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 header h1 div {
@@ -47,7 +54,7 @@ header #buttons {
   gap: 20px;
 }
 
-header #buttons button {
+header button {
   border: none;
   background: none;
   
@@ -60,7 +67,7 @@ header #buttons button {
   transition: color .3s, text-decoration .3s;
 }
 
-header #buttons button ion-icon {
+header button ion-icon {
   display: flex;
   align-items: center;
   font-size: 48px;
@@ -71,11 +78,11 @@ header #buttons button ion-icon {
 
 /* HOVER BUTTONS */
 
-header #buttons button:hover {
+header button:hover {
   cursor: pointer;
   text-decoration: underline var(--secondary-color) 3px;
 }
 
-header #buttons ion-icon:hover {
+header ion-icon:hover {
   color: var(--secondary-color);
 }
