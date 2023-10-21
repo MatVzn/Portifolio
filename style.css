@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
+  text-decoration: none;
 }
 
 :root {
@@ -25,39 +26,41 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   
   user-select: none;
 }
 
-header h1 {
+header #title h1 {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+
+  color: var(--primary-color);
 
   font-weight: 500;
-  font-size: 38px;
+  font-size: 30px;
 
   transition: transform .3s;
 }
 
-header h1:hover {
+header #title h1:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
 
-header h1 div {
+header #title h1 div {
   color: var(--secondary-color);
 }
 
-header #buttons {
+header #pages {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 
-header button {
-  border: none;
-  background: none;
-  
+header #pages a {
   font-size: 20px;
   font-weight: 400;
   color: var(--primary-color);
@@ -67,23 +70,30 @@ header button {
   transition: color .3s, text-decoration .3s, transform .3s;
 }
 
-header button ion-icon {
+header #pages button {
+  background: none;
+  border: none;
+
   display: flex;
   align-items: center;
   font-size: 48px;
+}
 
-  /* TRANSITION FOR HOVER BUTTONS */
-  transition: color .5s;
+header #pages ion-icon {
+  color: var(--primary-color);
+
+  /* Animation */
+  transition: color .3s;
 }
 
 /* HOVER BUTTONS */
 
-header button:hover {
+header #pages a:hover {
   cursor: pointer;
   text-decoration: underline var(--secondary-color) 2px;
   transform: scale(1.1);
 }
 
-header ion-icon:hover {
+header #pages ion-icon:hover {
   color: var(--secondary-color);
 }
