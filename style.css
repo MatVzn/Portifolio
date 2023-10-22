@@ -18,7 +18,7 @@
 body {
   background-color: var(--bg-primary-color);
   color: var(--primary-color);
-  padding: 40px 150px 0;
+  padding: 40px 200px 0;
 }
 
 /* HEADER */
@@ -27,6 +27,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 300px;
   
   user-select: none;
 }
@@ -83,7 +84,7 @@ header #pages ion-icon {
   color: var(--primary-color);
 
   /* Animation */
-  transition: color .3s;
+  transition: transform .3s, color .3s;
 }
 
 /* HOVER BUTTONS */
@@ -95,5 +96,21 @@ header #pages a:hover {
 }
 
 header #pages ion-icon:hover {
+  transform: scale(1.1);
   color: var(--secondary-color);
+}
+
+/* MAIN AREA */
+
+#line {
+  background-color: white;
+
+  margin-bottom: 30px;
+  width: 200px;
+  height: 5px;
+}
+
+#welcome {
+  font-weight: 500;
+  font-size: 52px;
 }
