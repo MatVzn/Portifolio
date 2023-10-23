@@ -2,14 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Outfit", sans-serif;
   text-decoration: none;
 }
 
 :root {
   --bg-primary-color: #222831;
   --bg-secondary-color: #393E46;
-  --primary-color: #EEEEEE;
+  --text-color: #EEEEEE;
+  --text-secondary-color: #b8b8b8;
   --secondary-color: #5ed881;
 }
 
@@ -17,8 +17,9 @@
 
 body {
   background-color: var(--bg-primary-color);
-  color: var(--primary-color);
-  padding: 40px 200px 0;
+  font-family: "Outfit", sans-serif;
+  color: var(--text-color);
+  padding: 40px 400px 0;
 }
 
 /* HEADER */
@@ -27,7 +28,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 300px;
+  margin-bottom: 250px;
   
   user-select: none;
 }
@@ -38,7 +39,7 @@ header #title h1 {
   align-items: center;
   gap: 8px;
 
-  color: var(--primary-color);
+  color: var(--text-color);
 
   font-weight: 500;
   font-size: 30px;
@@ -64,9 +65,9 @@ header #pages {
 header #pages a {
   font-size: 20px;
   font-weight: 400;
-  color: var(--primary-color);
+  color: var(--text-color);
 
-  /* TRANSITION FOR HOVER BUTTONS */
+  /* Animation */
   text-decoration: underline transparent 2px;
   transition: color .3s, text-decoration .3s, transform .3s;
 }
@@ -81,7 +82,7 @@ header #pages button {
 }
 
 header #pages ion-icon {
-  color: var(--primary-color);
+  color: var(--text-color);
 
   /* Animation */
   transition: transform .3s, color .3s;
@@ -90,17 +91,23 @@ header #pages ion-icon {
 /* HOVER BUTTONS */
 
 header #pages a:hover {
-  cursor: pointer;
   text-decoration: underline var(--secondary-color) 2px;
   transform: scale(1.1);
 }
 
 header #pages ion-icon:hover {
+  cursor: pointer;
   transform: scale(1.1);
   color: var(--secondary-color);
 }
 
 /* MAIN AREA */
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 #line {
   background-color: white;
@@ -113,4 +120,39 @@ header #pages ion-icon:hover {
 #welcome {
   font-weight: 500;
   font-size: 52px;
+}
+
+#aboutme {
+  width: 300px;
+}
+
+#aboutme h1 {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+#aboutme p {
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+
+  color: var(--text-secondary-color);
+}
+
+#aboutme a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+
+  color: var(--text-color);
+  text-decoration: underline transparent 2px;
+  transition: text-decoration .3s;
+
+  margin-top: 20px;
+}
+
+#aboutme a:hover {
+  text-decoration: underline var(--secondary-color) 2px;
 }
