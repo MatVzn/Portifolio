@@ -109,10 +109,10 @@ main {
   justify-content: space-between;
 }
 
-#line {
+#welcome #line {
   background-color: white;
 
-  margin-bottom: 30px;
+  margin: 40px 0;
   width: 200px;
   height: 5px;
 }
@@ -122,37 +122,52 @@ main {
   font-size: 52px;
 }
 
-#aboutme {
+#aside {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
   width: 300px;
 }
 
-#aboutme h1 {
+#aside h1 {
   font-family: "Kanit", sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 30px;
 }
 
-#aboutme p {
+#aside p {
   font-family: "Outfit", sans-serif;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 20px;
 
   color: var(--text-secondary-color);
 }
 
-#aboutme a {
+#aside a {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 5px;
 
   color: var(--text-color);
+  font-size: 20px;
   text-decoration: underline transparent 2px;
-  transition: text-decoration .3s;
+  transition: gap .1s, text-decoration .3s;
 
-  margin-top: 20px;
+  user-select: none;
+
+  margin-top: 25px;
 }
 
-#aboutme a:hover {
+#aside #line {
+  background-color: var(--text-secondary-color);
+
+  width: 250px;
+  height: 2px;
+}
+
+#aside a:hover {
   text-decoration: underline var(--secondary-color) 2px;
+  gap: 15px;
 }
