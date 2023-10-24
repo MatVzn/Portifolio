@@ -19,7 +19,7 @@ Esse está sendo desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O MyPortifolio é uma página de portfólio pessoal que pretendo atualizar constantemente até ela se tornar o meu próprio portifólio.
+O MyPortifolio é uma página de portfólio pessoal que pretendo atualizar constantemente até ela se tornar o meu próprio portifólio. Seu design está sendo inspirado em imagens e partes de páginas que encontrei na internet, sendo alteradas ao longo do tempo conforme o desenvolvimento da página e minhas necessidades.
 
 - [Acesse o projeto atual aqui](https://matvzn.github.io/MyPortfolio/)
 <br>
