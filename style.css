@@ -16,11 +16,17 @@
 /* GERAL */
 
 body {
-  background-color: var(--bg-primary-color);
   font-family: "Outfit", sans-serif;
   color: var(--text-color);
-  padding: 40px 400px 0;
 }
+
+#main {
+  background-color: var(--bg-primary-color);
+  padding: 40px 400px 0;
+  height: 1030px;
+}
+
+section
 
 /* HEADER */
 
@@ -153,7 +159,7 @@ main {
   color: var(--text-color);
   font-size: 20px;
   text-decoration: underline transparent 2px;
-  transition: gap .1s, text-decoration .3s;
+  transition: gap .3s, text-decoration .3s;
 
   user-select: none;
 
