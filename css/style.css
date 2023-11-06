@@ -22,8 +22,8 @@ body {
 
 #main {
   background-color: var(--bg-primary-color);
-  padding: 40px 400px 0;
-  height: 1030px;
+  padding: 40px 400px 100px;
+  min-height: 100vh;
 }
 
 section
@@ -176,4 +176,64 @@ main {
 #aside a:hover {
   text-decoration: underline var(--secondary-color) 2px;
   gap: 15px;
+}
+
+@media (max-width: 1600px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+
+    padding: 0 50px;
+  }
+
+  #welcome #line {
+    margin-bottom: 20px;
+  }
+
+  #main {
+    padding: 40px 200px 100px;
+  }
+
+  #aside  {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+
+    width: auto;
+  }
+
+  #aside #line {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  header #pages a {
+    display: none;
+  }
+
+  #main {
+    padding: 30px 50px 100px;
+  }
+
+  #aside {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  #aside h1 {
+    font-size: 25px;
+  }
+
+  #welcome p {
+    font-size: 40px;
+  }
+
+  #main {
+    padding: 15px 25px 100px;
+  }
 }
