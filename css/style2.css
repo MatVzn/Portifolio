@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --bg-primary-color: #222831;
+  --bg-secondary-color: #393E46;
+  --text-color: #EEEEEE;
+  --text-secondary-color: #b8b8b8;
+  --secondary-color: #5ed881;
+}
+
+/* GERAL */
+
+body {
+  font-family: "Outfit", sans-serif;
+  color: var(--text-color);
+}
+
+.hidden {
+  display: none;
+}
