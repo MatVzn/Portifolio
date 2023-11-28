@@ -123,6 +123,14 @@ main {
   height: 5px;
 }
 
+#welcome #long-line {
+  background-color: white;
+
+  margin: 40px 0;
+  width: 300px;
+  height: 5px;
+}
+
 #welcome {
   font-weight: 500;
   font-size: 52px;
@@ -176,6 +184,28 @@ main {
 #aside a:hover {
   text-decoration: underline var(--secondary-color) 2px;
   gap: 15px;
+}
+
+#aside-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 10px solid var(--secondary-color);
+  border-radius: 50px 20px;
+
+  height: 320px;
+  width: 420px;
+}
+
+#aside-about img {
+  margin-top: 60px;
+  height: 320px;
+
+  background-color: var(--bg-primary-color);
+
+  border: 20px solid var(--secondary-color);
+  border-radius: 20px 50px;
 }
 
 @media (max-width: 1600px) {
