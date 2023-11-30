@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --bg-primary-color: #222831;
+  --bg-secondary-color: #393E46;
+  --text-color: #EEEEEE;
+  --text-secondary-color: #b8b8b8;
+  --secondary-color: #5ed881;
+}
+
+/* GERAL */
+
+body {
+  font-family: "Outfit", sans-serif;
+  color: var(--text-color);
+  padding: 50px 400px;
+
+  background-color: var(--bg-primary-color);
+}
+
+.hidden {
+  display: none;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  user-select: none;
+}
+
+/* Title */
+
+.page-title {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+
+  font-weight: 400;
+  font-size: 32px;
+  color: var(--text-color);
+
+  transition: transform .2s;
+}
+
+.page-title div {
+  color: var(--secondary-color);
+}
+
+.page-title:hover {
+  transform: scale(1.1);
+}
+
+/* Nav-Links */
+
+.nav-links {
+  font-size: 20px;
+  font-weight: 400;
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  transition: color .2s;
+}
+
+.NavSelect {
+  color: red;
+}
+
+.nav-links button {
+  border: none;
+  background: none;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  color: var(--text-color);
+  font-size: 40px;
+}
