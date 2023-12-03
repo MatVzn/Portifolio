@@ -67,7 +67,6 @@ header {
 
   display: flex;
   align-items: center;
-  gap: 30px;
 
   list-style: none;
 }
@@ -75,6 +74,7 @@ header {
 .NavItem {
   transition: opacity .2s;
   color: var(--text-color);
+  padding-right: 30px;
 }
 
 .NavHover {
