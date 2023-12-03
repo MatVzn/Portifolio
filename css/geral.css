@@ -73,12 +73,12 @@ header {
 }
 
 .NavItem {
-  transition: color .2s;
+  transition: opacity .2s;
   color: var(--text-color);
 }
 
 .NavHover {
-  color: red;
+  opacity: 0.3;
 }
 
 .nav-links button {
@@ -92,4 +92,11 @@ header {
 
   color: var(--text-color);
   font-size: 40px;
+
+  transition: color .2s, transform .2s;
+}
+
+.nav-links button:hover {
+  color: var(--secondary-color);
+  transform: scale(1.1);
 }
