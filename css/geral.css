@@ -61,20 +61,23 @@ header {
 
 /* Nav-Links */
 
-.nav-links {
+.nav-links, .nav-links ul {
   font-size: 20px;
   font-weight: 400;
 
   display: flex;
   align-items: center;
   gap: 30px;
+
+  list-style: none;
 }
 
-.nav-links a {
+.NavItem {
   transition: color .2s;
+  color: var(--text-color);
 }
 
-.NavSelect {
+.NavHover {
   color: red;
 }
 
