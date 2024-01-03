@@ -22,6 +22,36 @@ main {
   justify-content: space-between;
 }
 
+main .background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .background img {
+  position: absolute;
+  z-index: -1;
+  width: 900px;
+
+  margin-top: 10px;
+  margin-right: 140px;
+}
+
+.welcome {
+  font-weight: 500;
+  font-size: 52px;
+}
+
+.welcome .background-response img {
+  display: none;
+
+  width: 400px;
+
+  padding: 5px;
+  border-radius: 300px;
+  border: solid var(--text-color);
+}
+
 .welcome .line {
   background-color: white;
 
@@ -30,10 +60,7 @@ main {
   height: 5px;
 }
 
-.welcome {
-  font-weight: 500;
-  font-size: 52px;
-}
+/* ASIDE AREA */
 
 .aside {
   display: flex;
@@ -107,6 +134,8 @@ main {
   border-radius: 20px 50px;
 }
 
+/* RESPONSIVE */
+
 @media (max-width: 1550px) {
   main {
     display: flex;
@@ -114,7 +143,21 @@ main {
     align-items: center;
     gap: 150px;
 
-    padding: 0px 50px 100px;
+    padding: 0px 30px 100px;
+  }
+
+  main .background {
+    display: none;
+  }
+
+  .welcome {
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+  }
+
+  .welcome .background-response img {
+    display: flex;
   }
 
   .welcome .line {
@@ -138,6 +181,10 @@ main {
 
   main {
     padding: 0px 20px 100px;
+  }
+
+  .welcome .background-response {
+    display: none;
   }
 
   .aside {

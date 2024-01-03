@@ -4,46 +4,50 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
+
+  <link rel="stylesheet" href="./css/geral.css">
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&family=Outfit:wght@200;300;400;500;600&display=swap');
   </style>
+
   <title>MatVzn - Sobre</title>
 </head>
 <body>
-  <section id="main">
+  
+  <header> 
 
-    <header>
-      <a href="index.html" id="title">
-        <h1>
-          <div>&#60&#47&#62</div>Matteo
-        </h1>
-      </a>
-      <div id="pages">
-        <a href="index.html">Home</a>
-        <a href="about.html">Sobre</a>
-        <a href="https://github.com/MatVzn" target="_blank">Github</a>
-        <a href="#">Páginas</a>
-        <button id="menu">
-          <ion-icon name="menu-outline"></ion-icon>
-        </button>
-      </div>
-      
-    </header>
+    <a href="index.html">
+      <h1 class="page-title">
+        <div>&#60&#47&#62</div>Matteo
+      </h1>
+    </a>
 
-    <main>
-      <section id="welcome">
-        <div id="long-line"></div>
-        <p>Prazer em te conhecer, <br>
-        meu nome é Matteo!</p>
-      </section>
-      
-      <div id="aside-about">
-        <img src="./assets/avatar.png" alt="avatar">
-      </div>
-    </main>
+    <nav class="nav-links">
+      <ul>
+        <li>
+          <a class="NavItem" href="index.html">Home</a>
+        </li>
+        <li>
+          <a class="NavItem" href="about.html">Sobre</a>
+        </li>
+        <li>
+          <a class="NavItem" href="https://github.com/MatVzn" target="_blank">Github</a>
+        </li>
+        <li>
+          <a class="NavItem" href="projects.html">Projetos</a>
+        </li>
+      </ul>
+
+      <button class="menu">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+    </nav>
+
+  </header>
     
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="./js/script.js"></script>
 </body>
 </html>

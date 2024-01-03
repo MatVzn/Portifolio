@@ -106,7 +106,7 @@ header {
 @media (max-width: 1550px) {
 
   body {
-    padding: 50px 250px;
+    padding: 50px 150px;
   }
 
   .nav-links ul {
@@ -117,7 +117,7 @@ header {
 
 @media (max-width: 1200px) {
   body {
-    padding: 50px 150px;
+    padding: 50px 100px;
   }
 
 }
