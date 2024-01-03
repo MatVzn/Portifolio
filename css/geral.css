@@ -18,7 +18,7 @@
 body {
   font-family: "Outfit", sans-serif;
   color: var(--text-color);
-  padding: 50px 400px;
+  padding: 50px 300px;
 
   background-color: var(--bg-primary-color);
 }
@@ -35,7 +35,8 @@ header {
   align-items: center;
 
   user-select: none;
-  padding-bottom: 150px;
+  padding-bottom: 250px;
+  padding-right: 50px;
 }
 
 /* Title */
@@ -85,7 +86,6 @@ header {
 .nav-links button {
   border: none;
   background: none;
-  padding-right: 50px;
 
   cursor: pointer;
 
@@ -103,7 +103,7 @@ header {
   transform: scale(1.1);
 }
 
-@media (max-width: 1650px) {
+@media (max-width: 1550px) {
 
   body {
     padding: 50px 250px;
@@ -113,20 +113,13 @@ header {
     display: none;
   }
 
-  .nav-links button {
-    padding-right: 100px;
-  }
-
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1200px) {
   body {
     padding: 50px 150px;
   }
 
-  .nav-links button {
-    padding-right: 50px;
-  }
 }
 
 @media (max-width: 750px) {
@@ -134,7 +127,4 @@ header {
     padding: 50px 50px;
   }
 
-  .nav-links button {
-    padding-right: 0px;
-  }
 }
