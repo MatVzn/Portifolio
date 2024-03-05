@@ -11,7 +11,7 @@
 
 ## 🚀 Tecnologias
 
-Esse está sendo desenvolvido com as seguintes tecnologias:
+Esse projeto está sendo desenvolvido com as seguintes tecnologias:
 
 - HTML e CSS
 - JavaScript
