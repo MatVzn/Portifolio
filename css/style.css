@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -11,6 +12,7 @@
   --text-color: #EEEEEE;
   --text-secondary-color: #b8b8b8;
   --secondary-color: #77B0AA;
+  --contrast-color: #ffc4bc;
 }
 
 /* MAIN AREA */

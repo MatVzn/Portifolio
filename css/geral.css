@@ -12,6 +12,7 @@
   --text-color: #EEEEEE;
   --text-secondary-color: #b8b8b8;
   --secondary-color: #77B0AA;
+  --contrast-color: #ffc4bc;
 }
 
 /* GERAL */
@@ -23,6 +24,25 @@ body {
 
 .hidden {
   display: none;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-secondary-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-primary-color);
 }
 
 /* HEADER */
