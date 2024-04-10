@@ -3,14 +3,15 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 :root {
-  --bg-primary-color: #222831;
-  --bg-secondary-color: #393E46;
+  --bg-primary-color: #003C43;
+  --bg-secondary-color: #135D66;
   --text-color: #EEEEEE;
   --text-secondary-color: #b8b8b8;
-  --secondary-color: #5ed881;
+  --secondary-color: #77B0AA;
 }
 
 /* GERAL */
@@ -18,7 +19,6 @@
 body {
   font-family: "Outfit", sans-serif;
   color: var(--text-color);
-  padding: 50px 300px;
 
   background-color: var(--bg-primary-color);
 }
@@ -33,10 +33,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 150px;
 
   user-select: none;
-  padding-bottom: 250px;
-  padding-right: 50px;
+  padding: 20px 250px;
+
+  position: sticky;
+  top: 0px;
+
+  background-color: var(--bg-primary-color);
 }
 
 /* Title */
@@ -69,6 +74,7 @@ header {
 
   display: flex;
   align-items: center;
+  gap: 30px;
 
   list-style: none;
 }
@@ -76,7 +82,6 @@ header {
 .NavItem {
   transition: opacity .2s;
   color: var(--text-color);
-  padding-right: 30px;
 }
 
 .NavHover {
@@ -89,7 +94,7 @@ header {
 
   cursor: pointer;
 
-  display: flex;
+  display: none;
   align-items: center;
 
   color: var(--text-color);
@@ -103,28 +108,43 @@ header {
   transform: scale(1.1);
 }
 
-@media (max-width: 1550px) {
+@media (max-width: 1400px) {
 
-  body {
-    padding: 50px 150px;
+  .page-title {
+    font-size: 28px;
+  }
+
+  header {
+    padding: 20px 150px;
   }
 
   .nav-links ul {
     display: none;
   }
 
+  .nav-links button {
+    display: flex;
+  }
 }
 
-@media (max-width: 1200px) {
-  body {
-    padding: 50px 100px;
+@media (max-width: 800px) {
+  
+  .page-title {
+    font-size: 24px;
+  }
+
+  header {
+    padding: 20px 100px;
+    gap: 50px;
   }
 
 }
 
-@media (max-width: 750px) {
-  body {
-    padding: 50px 50px;
+@media (max-width: 600px) {
+
+  header {
+    padding: 20px 30px;
+    gap: 50px;
   }
 
 }

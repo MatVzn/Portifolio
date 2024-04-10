@@ -6,137 +6,59 @@
 }
 
 :root {
-  --bg-primary-color: #222831;
-  --bg-secondary-color: #393E46;
+  --bg-primary-color: #003C43;
+  --bg-secondary-color: #135D66;
   --text-color: #EEEEEE;
   --text-secondary-color: #b8b8b8;
-  --secondary-color: #5ed881;
+  --secondary-color: #77B0AA;
 }
-
 
 /* MAIN AREA */
 
 main {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  height: 1080px;
 }
 
-main .background {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.title {
+  text-align: center;
+  padding-top: 150px;
+
+  font-size: 42px;
 }
 
-main .background img {
-  position: absolute;
-  z-index: -1;
-  width: 900px;
-
-  margin-top: 10px;
-  margin-right: 140px;
+.aboutme {
+  background-color: var(--bg-secondary-color);
+  height: 1080px;
 }
 
-.welcome {
-  font-weight: 500;
-  font-size: 52px;
-}
-
-.welcome .background-response img {
-  display: none;
-
-  width: 400px;
-
-  padding: 5px;
-  border-radius: 300px;
-  border: solid var(--text-color);
-}
-
-.welcome .line {
-  background-color: white;
-
-  margin: 40px 0;
-  width: 200px;
-  height: 5px;
-}
-
-/* ASIDE AREA */
-
-.aside {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-
-  width: 300px;
-}
-
-.aside h1 {
-  font-family: "Kanit", sans-serif;
-  font-weight: 500;
-  font-size: 30px;
-}
-
-.aside p {
-  font-family: "Outfit", sans-serif;
-  font-weight: 300;
-  font-size: 20px;
-
-  color: var(--text-secondary-color);
-}
-
-.aside a {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 5px;
-
-  color: var(--text-color);
-  font-size: 20px;
-  text-decoration: underline transparent 2px;
-  transition: gap .3s, text-decoration .3s;
-
-  user-select: none;
-
-  margin-top: 25px;
-}
-
-.aside .line {
-  background-color: var(--text-secondary-color);
-
-  width: 250px;
-  height: 2px;
-}
-
-.aside a:hover {
-  text-decoration: underline var(--secondary-color) 2px;
-  gap: 15px;
-}
-
-.aside-about {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 10px solid var(--secondary-color);
-  border-radius: 50px 20px;
-
-  height: 320px;
-  width: 420px;
-}
-
-.aside-about img {
-  margin-top: 60px;
-  height: 320px;
-
+.skills {
   background-color: var(--bg-primary-color);
+  height: 1080px;
+}
 
-  border: 20px solid var(--secondary-color);
-  border-radius: 20px 50px;
+.projects {
+  background-color: var(--bg-secondary-color);
+  height: 1080px;
+}
+
+.contact {
+  background-color: var(--bg-primary-color);
+  height: 1080px;
+}
+
+footer {
+  background-color: var(--bg-secondary-color);
+  height: 150px;
 }
 
 /* RESPONSIVE */
 
-@media (max-width: 1550px) {
+@media (max-width: 1485px) {
+
+  .aside {
+    display: none;
+  }
+
   main {
     display: flex;
     flex-direction: column;
@@ -144,10 +66,6 @@ main .background img {
     gap: 150px;
 
     padding: 0px 30px 100px;
-  }
-
-  main .background {
-    display: none;
   }
 
   .welcome {
@@ -163,18 +81,6 @@ main .background img {
   .welcome .line {
     margin-bottom: 20px;
   }
-
-  .aside  {
-    display: flex;
-    flex-direction: row;
-    gap: 60px;
-
-    width: auto;
-  }
-
-  .aside .line {
-    display: none;
-  }
 }
 
 @media (max-width: 1200px) {
@@ -186,22 +92,12 @@ main .background img {
   .welcome .background-response {
     display: none;
   }
-
-  .aside {
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-  }
 }
 
 @media (max-width: 750px) {
 
   main {
     padding: 0px 100px;
-  }
-
-  .aside h1 {
-    font-size: 25px;
   }
 
   .welcome p {
