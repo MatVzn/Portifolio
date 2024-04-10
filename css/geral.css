@@ -19,8 +19,6 @@
 body {
   font-family: "Outfit", sans-serif;
   color: var(--text-color);
-
-  background-color: var(--bg-primary-color);
 }
 
 .hidden {
@@ -115,7 +113,7 @@ header {
   }
 
   header {
-    padding: 20px 150px;
+    padding: 20px 120px;
   }
 
   .nav-links ul {
