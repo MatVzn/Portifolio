@@ -9,10 +9,11 @@
 :root {
   --bg-primary-color: #003C43;
   --bg-secondary-color: #135D66;
-  --text-color: #EEEEEE;
+  --text-color: #f0fdfa;
   --text-secondary-color: #b8b8b8;
-  --secondary-color: #77B0AA;
+  --secondary-color: #0f766e;
   --contrast-color: #ffc4bc;
+  --card-color: #042f2e;
 }
 
 /* MAIN AREA */
@@ -24,8 +25,11 @@ main {
 }
 
 .title {
+  color: var(--text-color);
+
   text-align: center;
-  padding-top: 120px;
+  padding-top: 150px;
+  padding-bottom: 120px;
 
   font-size: 42px;
 }
@@ -37,7 +41,81 @@ main {
 
 .skills {
   background: linear-gradient(var(--bg-primary-color) 10%, var(--bg-secondary-color) 100%);
-  height: 1080px;
+  height: auto;
+}
+
+.techArea {
+  padding: 0px 250px;
+  place-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+
+  padding-bottom: 180px;
+}
+
+.techBox {
+  background: var(--card-color);
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  font-size: 15px;
+
+  padding: 40px 20px;
+  width: auto;
+  max-width: 300px;
+  height: 100%;
+
+  transition: all .3s;
+}
+
+.techBox img {
+  width: 82px;
+  border-radius: 10px;
+}
+
+.techBox p {
+  color: var(--text-secondary-color);
+  font-size: 15px;
+  text-align: center;
+}
+
+.techBox:hover {
+  transform: scale(1.05);
+}
+
+.arrow-circle {
+  border-radius: 30px;
+  background: var(--contrast-color);
+  width: 48px;
+  height: 48px;
+
+  position: absolute;
+  z-index: 0;
+  right: 50%;
+  top: 288%;
+  transform: translateX(50%);
+
+  margin: 150px 0;
+}
+
+.arrow-down svg {
+  position: absolute;
+  right: 50%;
+  top: 15%;
+  transform: translateX(50%);
+
+  color: var(--text-color);
+}
+
+.description-arrow {
+  text-align: center;
+  color: var(--text-color);
 }
 
 .projects {
@@ -57,14 +135,34 @@ footer {
 
 /* RESPONSIVE */
 
-@media (max-width: 1485px) {
+@media (max-width: 1400px) {
+  .techArea {
+    padding: 0px 300px;
+    grid-template-columns: repeat(3, 1fr);
+  }
 
+  .arrow-circle, .arrow-down svg, .description-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 1300px) {
+  .techArea {
+    padding: 0px 300px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 1200px) {
-
+  .techArea {
+    padding: 0 200px;
+  }
 }
 
-@media (max-width: 750px) {
-
+@media (max-width: 900px) {
+  .techArea {
+    padding: 0 10px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+  }
 }

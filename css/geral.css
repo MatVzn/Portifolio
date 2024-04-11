@@ -9,10 +9,11 @@
 :root {
   --bg-primary-color: #003C43;
   --bg-secondary-color: #135D66;
-  --text-color: #EEEEEE;
+  --text-color: #f0fdfa;
   --text-secondary-color: #b8b8b8;
-  --secondary-color: #77B0AA;
+  --secondary-color: #0f766e;
   --contrast-color: #ffc4bc;
+  --card-color: #042f2e;
 }
 
 /* GERAL */
@@ -56,6 +57,7 @@ header {
   user-select: none;
   padding: 20px 250px;
 
+  z-index: 2;
   position: sticky;
   top: 0px;
 
@@ -77,7 +79,7 @@ header {
 }
 
 .page-title div {
-  color: var(--secondary-color);
+  color: var(--contrast-color);
 }
 
 .page-title:hover {
@@ -86,10 +88,7 @@ header {
 
 /* Nav-Links */
 
-.nav-links, .nav-links ul {
-  font-size: 20px;
-  font-weight: 400;
-
+.nav-links ul {
   display: flex;
   align-items: center;
   gap: 30px;
@@ -97,16 +96,19 @@ header {
   list-style: none;
 }
 
-.NavItem {
-  transition: opacity .2s;
+.navItem {
   color: var(--text-color);
+  font-size: 20px;
+  font-weight: 400;
+
+  transition: all .5s;
 }
 
-.NavHover {
-  opacity: 0.3;
+.navItem:hover {
+  color: var(--contrast-color);
 }
 
-.nav-links button {
+.navMenu {
   border: none;
   background: none;
 
@@ -121,9 +123,13 @@ header {
   transition: color .2s, transform .2s;
 }
 
-.nav-links button:hover {
-  color: var(--secondary-color);
+.navMenu:hover {
+  color: var(--contrast-color);
   transform: scale(1.1);
+}
+
+.navUnHover {
+  opacity: 0.3;
 }
 
 @media (max-width: 1400px) {
