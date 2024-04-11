@@ -51,7 +51,7 @@ main {
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 
-  padding-bottom: 180px;
+  padding-bottom: 210px;
 }
 
 .techBox {
@@ -89,35 +89,6 @@ main {
   transform: scale(1.05);
 }
 
-.arrow-circle {
-  border-radius: 30px;
-  background: var(--contrast-color);
-  width: 48px;
-  height: 48px;
-
-  position: absolute;
-  z-index: 0;
-  right: 50%;
-  top: 288%;
-  transform: translateX(50%);
-
-  margin: 150px 0;
-}
-
-.arrow-down svg {
-  position: absolute;
-  right: 50%;
-  top: 15%;
-  transform: translateX(50%);
-
-  color: var(--text-color);
-}
-
-.description-arrow {
-  text-align: center;
-  color: var(--text-color);
-}
-
 .projects {
   background: linear-gradient(var(--bg-secondary-color) 0%, var(--secondary-color) 100%);
   height: 1080px;
@@ -139,10 +110,6 @@ footer {
   .techArea {
     padding: 0px 300px;
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .arrow-circle, .arrow-down svg, .description-arrow {
-    display: none;
   }
 }
 
