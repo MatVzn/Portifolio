@@ -32,6 +32,7 @@ main {
   padding-bottom: 120px;
 
   font-size: 42px;
+  user-select: none;
 }
 
 .aboutme {
@@ -44,12 +45,16 @@ main {
   height: auto;
 }
 
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .techArea {
-  padding: 0px 250px;
-  place-items: center;
-  display: grid;
+  display: inline-grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  grid-gap: 25px;
 
   padding-bottom: 210px;
 }
@@ -68,14 +73,20 @@ main {
 
   padding: 40px 20px;
   width: auto;
-  max-width: 300px;
+  max-width: 260px;
   height: 100%;
+
+  outline: 3px solid;
 
   transition: all .3s;
 }
 
+.techBox h1 {
+  font-size: 20px;
+}
+
 .techBox img {
-  width: 82px;
+  width: 80px;
   border-radius: 10px;
 }
 
@@ -86,7 +97,7 @@ main {
 }
 
 .techBox:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .projects {
@@ -106,30 +117,40 @@ footer {
 
 /* RESPONSIVE */
 
-@media (max-width: 1400px) {
+@media (max-width: 1300px) {
   .techArea {
-    padding: 0px 300px;
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 1300px) {
+  .techBox img {
+    width: 70px;
+  }
+
   .techArea {
-    padding: 0px 300px;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 1200px) {
-  .techArea {
-    padding: 0 200px;
+@media (max-width: 700px) {
+  .title {
+    font-size: 36px;
   }
-}
 
-@media (max-width: 900px) {
   .techArea {
-    padding: 0 10px;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 15px;
+  }
+
+  .techBox h1 {
+    font-size: 18px;
+  }
+
+  .techBox p {
+    font-size: 16px;
+  }
+
+  .techBox img {
+    width: 60px;
   }
 }
