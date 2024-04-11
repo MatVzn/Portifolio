@@ -24,6 +24,8 @@ main {
   background: linear-gradient(var(--bg-primary-color) 0%, var(--secondary-color) 100%);
 }
 
+/* GERAL AREA */
+
 .title {
   color: var(--text-color);
 
@@ -35,20 +37,24 @@ main {
   user-select: none;
 }
 
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ABOUTME AREA */
+
 .aboutme {
   background: linear-gradient(var(--secondary-color) 0%, var(--bg-primary-color) 100%);
   height: 1080px;
 }
 
+/* TECHS AREA */
+
 .skills {
   background: linear-gradient(var(--bg-primary-color) 10%, var(--bg-secondary-color) 100%);
   height: auto;
-}
-
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .techArea {
@@ -100,10 +106,14 @@ main {
   transform: scale(1.03);
 }
 
+/* PROJETCS AREA */
+
 .projects {
   background: linear-gradient(var(--bg-secondary-color) 0%, var(--secondary-color) 100%);
   height: 1080px;
 }
+
+/* CONTACT AREA */
 
 .contact {
   background: linear-gradient(var(--secondary-color) 0%, var(--bg-primary-color) 100%);
