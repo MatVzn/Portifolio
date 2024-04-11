@@ -82,13 +82,14 @@ main {
   max-width: 260px;
   height: 100%;
 
-  outline: 3px solid;
+  outline: 2px solid;
 
   transition: all .3s;
 }
 
 .tech-box h1 {
   font-size: 20px;
+  font-weight: 300;
 }
 
 .tech-box img {
@@ -140,7 +141,6 @@ main {
 .social-links li:hover {
   background-color: var(--bg-primary-color);
   outline-color: var(--text-color)!important;
-  fill: var(--text-color)!important;
   transform: scale(1.1);
 }
 
