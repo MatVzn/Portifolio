@@ -132,7 +132,13 @@ header {
   opacity: 0.3;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1500px) {
+  header {
+    padding: 20px 100px;
+  }
+}
+
+@media (max-width: 1300px) {
 
   .page-title {
     font-size: 28px;
@@ -142,6 +148,13 @@ header {
     padding: 20px 120px;
   }
 
+  .navItem {
+    font-size: 18px;
+  }
+
+}
+
+@media (max-width: 980px) {
   .nav-links ul {
     display: none;
   }
