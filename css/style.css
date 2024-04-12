@@ -27,7 +27,7 @@ main {
 /* GERAL AREA */
 
 .title {
-  color: var(--text-color);
+  color: var(--contrast-color);
 
   text-align: center;
   padding-top: 150px;
@@ -61,8 +61,6 @@ main {
   display: inline-grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 25px;
-
-  padding-bottom: 210px;
 }
 
 .tech-box {
@@ -127,10 +125,13 @@ main {
   list-style: none;
   display: flex;
   flex-direction: row;
+  place-items: center;
   gap: 50px;
 }
 
 .social-links li {
+  display: flex;
+  justify-content: center;
   background: var(--card-color);
   padding: 25px;
   border-radius: 15px;
@@ -190,5 +191,20 @@ footer {
 
   .tech-box img {
     width: 60px;
+  }
+
+  .social-links {
+    gap: 10px;
+  }
+
+  .social-links li {
+    padding: 0;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+  }
+
+  .social-links svg {
+    width: 30px;
   }
 }
