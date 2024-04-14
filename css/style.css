@@ -282,6 +282,14 @@ footer {
   .project-techs p {
     width: unset;
   }
+
+  .project-box .left:active{
+    transform: scale(1.48) translateX(15%) translateY(10%);
+  }
+  
+  .project-box .right:active{
+    transform: scale(1.48) translateX(-15%) translateY(10%);
+  }
 } /* project area responsive*/
 
 @media (max-width: 1300px) {
@@ -345,7 +353,7 @@ footer {
   .title {
     font-size: 36px;
     padding-top: 120px;
-    padding-bottom: 100px;
+    padding-bottom: 70px;
   }
 
   .tech-area {
