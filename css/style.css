@@ -126,6 +126,7 @@ main {
 
 .project-box picture {
   text-align: center;
+  user-select: none;
 }
 
 .project-box picture img {
@@ -138,14 +139,17 @@ main {
 .project-box picture img:hover {
   cursor: zoom-in;
   transform: scale(1.02);
+  user-select: none;
 }
 
 .project-box .left:active{
-  transform: scale(1.67) translateX(19.85%) translateY(10%);
+  transform: scale(1.67) translateX(19.5%) translateY(10%);
+  user-select: none;
 }
 
 .project-box .right:active{
-  transform: scale(1.67) translateX(-19.85%) translateY(10%);
+  transform: scale(1.67) translateX(-19.5%) translateY(10%);
+  user-select: none;
 }
 
 .project-aside {
@@ -318,6 +322,22 @@ footer {
 
   .project-aside p {
     width: auto;
+  }
+
+  .project-box picture img:hover {
+    cursor: zoom-in;
+    transform: scale(1.02);
+    user-select: none;
+  }
+  
+  .project-box .left:active{
+    transform: scale(1.2) translateY(-8%);
+    user-select: none;
+  }
+  
+  .project-box .right:active{
+    transform: scale(1.2) translateY(-8%);
+    user-select: none;
   }
 
 } /* project area responsive*/
