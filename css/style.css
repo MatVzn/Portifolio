@@ -31,7 +31,7 @@ main {
 
   text-align: center;
   padding-top: 150px;
-  padding-bottom: 100px;
+  padding-bottom: 120px;
 
   font-size: 42px;
   user-select: none;
@@ -121,7 +121,7 @@ main {
   flex-direction: row;
   gap: 30px;
   justify-content: center;
-  padding-bottom: 80px;
+  padding-bottom: 85px;
 }
 
 .project-box picture {
@@ -327,8 +327,8 @@ footer {
   }
 
   .project-box picture img:hover {
-    cursor: zoom-in;
-    transform: scale(1.02);
+    cursor: unset;
+    transform: scale(1.2) translateY(-8%);
   }
   
   .project-box .left:active{
@@ -344,8 +344,8 @@ footer {
 @media (max-width: 980px) {
   .title {
     font-size: 36px;
-    padding-top: 75px;
-    padding-bottom: 60px;
+    padding-top: 120px;
+    padding-bottom: 100px;
   }
 
   .tech-area {
