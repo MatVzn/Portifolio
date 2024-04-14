@@ -126,30 +126,32 @@ main {
 
 .project-box picture {
   text-align: center;
-  user-select: none;
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 
 .project-box picture img {
   width: 800px;
   border-radius: 15px;
   transition: all .3s;
-  user-select: none;
 }
 
 .project-box picture img:hover {
   cursor: zoom-in;
   transform: scale(1.02);
-  user-select: none;
 }
 
 .project-box .left:active{
   transform: scale(1.67) translateX(19.5%) translateY(10%);
-  user-select: none;
 }
 
 .project-box .right:active{
   transform: scale(1.67) translateX(-19.5%) translateY(10%);
-  user-select: none;
 }
 
 .project-aside {
@@ -327,17 +329,14 @@ footer {
   .project-box picture img:hover {
     cursor: zoom-in;
     transform: scale(1.02);
-    user-select: none;
   }
   
   .project-box .left:active{
     transform: scale(1.2) translateY(-8%);
-    user-select: none;
   }
   
   .project-box .right:active{
     transform: scale(1.2) translateY(-8%);
-    user-select: none;
   }
 
 } /* project area responsive*/
