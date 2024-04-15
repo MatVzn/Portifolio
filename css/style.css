@@ -233,6 +233,17 @@ main {
 
 /* PROJETCS AREA */
 
+.gold-hover {
+  background: linear-gradient(45deg, #BF953F, #cc9929, transparent, #AA771C)!important;
+  background-color: #d4cb69!important;
+  color: var(--text-color)!important;
+  transition: background .5s;
+}
+
+.gold-hover:hover {
+  background-color: #f8f093!important;
+}
+
 .projects {
   background: linear-gradient(var(--bg-secondary-color) 0%, var(--secondary-color) 100%);
   height: auto;
