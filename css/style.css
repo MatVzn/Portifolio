@@ -188,7 +188,8 @@ main {
 }
 
 .tech-box {
-  background: var(--card-color);
+  background: linear-gradient(30deg, var(--card-color), transparent);
+  background-color: var(--card-color);
   border-radius: 15px;
 
   display: flex;
@@ -201,7 +202,7 @@ main {
 
   padding: 40px 20px;
   width: auto;
-  max-width: 260px;
+  width: 260px;
   height: 100%;
 
   outline: 2px solid;
@@ -219,11 +220,11 @@ main {
   border-radius: 10px;
 }
 
-.tech-box p {
+/* .tech-box p {
   color: var(--text-secondary-color);
   font-size: 15px;
   text-align: center;
-}
+} */
 
 .tech-box:hover {
   outline-color: white!important;
@@ -290,7 +291,8 @@ main {
 }
 
 .project-aside {
-  border: 2px var(--contrast-color) solid;
+  background: linear-gradient(30deg, var(--bg-secondary-color), var(--secondary-color));
+  border: 2px var(--text-color) solid;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -320,7 +322,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--card-color);
+  background: linear-gradient(30deg, var(--card-color), transparent);
+  background-color: var(--card-color);
   color: var(--text-color);
   border-radius: 15px;
   padding: 3px 8px;
@@ -340,6 +343,7 @@ main {
 .project-aside button {
   all: unset;
   color: var(--text-color);
+  background: linear-gradient(30deg, var(--card-color), transparent);
   background-color: var(--card-color);
   display: inline-flex;
   place-items: center;
@@ -375,7 +379,8 @@ main {
 .social-links li {
   display: flex;
   justify-content: center;
-  background: var(--card-color);
+  background: linear-gradient(30deg, var(--card-color), transparent);
+  background-color: var(--card-color);
   padding: 25px;
   border-radius: 15px;
   outline: 2px solid;
@@ -385,7 +390,7 @@ main {
 .social-links li:hover {
   background-color: var(--bg-primary-color);
   outline-color: var(--text-color)!important;
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 footer {
