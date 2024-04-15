@@ -510,7 +510,7 @@ footer .name-link a:hover:after {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 110px;
+    padding-bottom: 10%;
   }
 
   .project-box.right {
