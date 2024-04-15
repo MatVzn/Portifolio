@@ -16,6 +16,130 @@
   --card-color: #042f2e;
 }
 
+/* GERAL */
+
+body {
+  font-family: "Outfit", sans-serif;
+  color: var(--text-color);
+}
+
+.hidden {
+  display: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-select: none; 
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-secondary-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-primary-color);
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 150px;
+
+  user-select: none;
+  padding: 15px 100px;
+
+  z-index: 2;
+  position: sticky;
+  top: 0px;
+
+  background-color: var(--bg-primary-color);
+}
+
+/* Title */
+
+.page-title {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+
+  font-weight: 400;
+  font-size: 32px;
+  color: var(--text-color);
+
+  transition: transform .2s;
+}
+
+.page-title div {
+  color: var(--contrast-color);
+}
+
+.page-title:hover {
+  transform: scale(1.05);
+}
+
+/* Nav-Links */
+
+.nav-links ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  list-style: none;
+}
+
+.navItem {
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 400;
+
+  transition: all .5s;
+}
+
+.navItem:hover {
+  color: var(--contrast-color);
+}
+
+.navMenu {
+  border: none;
+  background: none;
+
+  cursor: pointer;
+
+  display: none;
+  align-items: center;
+
+  color: var(--text-color);
+  font-size: 40px;
+
+  transition: color .2s, transform .2s;
+}
+
+.navMenu:hover {
+  color: var(--contrast-color);
+  transform: scale(1.1);
+}
+
+.navUnHover {
+  opacity: 0.3;
+}
+
 /* MAIN AREA */
 
 main {
@@ -121,7 +245,7 @@ main {
   flex-direction: row;
   gap: 30px;
   justify-content: center;
-  padding-bottom: 85px;
+  padding-bottom: 80px;
 }
 
 .project-box picture {
@@ -254,13 +378,73 @@ main {
 }
 
 footer {
-  background-color: var(--bg-primary-color);
-  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 100px;
+  gap: 60px;
+  align-items: center;
+  background-color: var(--card-color);
+  height: 100px;
+  font-weight: 300;
+  text-align: center;
+  font-size: 30px;
+}
+
+footer .name-link a {
+  color: var(--text-color);
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  transition: all .5s;
+}
+
+footer .name-link a:hover {
+  color: var(--contrast-color);
+}
+
+footer .name-link a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1%;
+  height: 3px;
+  background-color: var(--text-color);
+  opacity: 0;
+  transition: all .5s;
+}
+
+footer .name-link a:hover:after {
+  background-color: var(--contrast-color);
+  opacity: 1;
+  width: 100%; 
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.footer-links button {
+  all: unset;
+  color: var(--text-color);
+  transition: all .5s;
+}
+
+.footer-links button:hover {
+  transform: translateY(-5px);
+  color: var(--contrast-color);
 }
 
 /* RESPONSIVE */
 
 @media (max-width: 1500px) {
+  header {
+    padding: 20px 100px;
+  }
+  
   .tech-box img {
     width: 70px;
   }
@@ -293,6 +477,14 @@ footer {
 } /* project area responsive*/
 
 @media (max-width: 1300px) {
+  .page-title {
+    font-size: 28px;
+  }
+
+  .navItem {
+    font-size: 18px;
+  }
+  
   .tech-box img {
     width: 70px;
   }
@@ -307,6 +499,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 110px;
   }
 
   .project-box.right {
@@ -350,6 +543,14 @@ footer {
 } /* project area responsive*/
 
 @media (max-width: 980px) {
+  .nav-links ul {
+    display: none;
+  }
+
+  .nav-links button {
+    display: flex;
+  }
+  
   .title {
     font-size: 36px;
     padding-top: 120px;
@@ -386,10 +587,44 @@ footer {
   .social-links svg {
     width: 30px;
   }
+
+  footer {
+    justify-content: space-between;
+    padding: 0 40px;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  
+  .page-title {
+    font-size: 24px;
+  }
+
+  header {
+    padding: 20px 60px;
+    gap: 50px;
+  }
+
 }
 
 @media (max-width: 600px) {
+
+  header {
+    padding: 20px 30px;
+    gap: 50px;
+  }
+
   .tech-area {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  footer {
+    font-size: 18px;
+    padding: 0 20px;
+  }
+
+  .footer-links {
+    gap: 8px;
   }
 }
