@@ -12,7 +12,8 @@
   --text-color: #f0fdfa;
   --text-secondary-color: #b8b8b8;
   --secondary-color: #0f766e;
-  --contrast-color: #ffc4bc;
+  --contrast-color: #eea298;
+  --contrast-secondy-color: #f3b5ad;
   --card-color: #042f2e;
 }
 
@@ -33,6 +34,32 @@ img {
   -moz-user-drag: none;
   -o-user-drag: none;
   user-select: none; 
+}
+
+#topBtn {
+  all: unset;
+  display: flex;
+  opacity: 0;
+  color: var(--text-color);
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 20;
+  bottom: 0;
+  right: 0;
+  height: 52px;
+  width: 52px;
+  border-radius: 25px;
+  background: linear-gradient(60deg, var(--contrast-color) 60%, transparent);
+  background-color: var(--contrast-color);
+  transition: all .5s;
+}
+
+#topBtn:hover {
+  cursor: pointer;
+  background-color: var(--text-color);
+  transform: scale(1.08);
 }
 
 /* SCROLLBAR */
@@ -151,7 +178,7 @@ main {
 /* GERAL AREA */
 
 .title {
-  color: var(--contrast-color);
+  color: var(--contrast-secondy-color);
 
   text-align: center;
   padding-top: 150px;
@@ -219,12 +246,6 @@ main {
   width: 80px;
   border-radius: 10px;
 }
-
-/* .tech-box p {
-  color: var(--text-secondary-color);
-  font-size: 15px;
-  text-align: center;
-} */
 
 .tech-box:hover {
   outline-color: white!important;
@@ -613,6 +634,16 @@ footer .name-link a:hover:after {
 
 @media (max-width: 800px) {
   
+  #topBtn {
+    height: 42px;
+    width: 42px;
+  }
+
+  #topBtn svg {
+    height: 22;
+    width: 22px;
+  }
+
   .page-title {
     font-size: 24px;
   }
@@ -644,3 +675,5 @@ footer .name-link a:hover:after {
     gap: 8px;
   }
 }
+
+/* ANIMATION */

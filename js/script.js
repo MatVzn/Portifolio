@@ -27,3 +27,33 @@ document.addEventListener('DOMContentLoaded', function() {
     item.addEventListener('mouseout', navHoverResetHandler)
   })
 })
+
+var topbutton = document.getElementById("topBtn")
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    topbutton.style.opacity = "1"
+  } else {
+    topbutton.style.opacity = "0"
+  }
+}
+
+function fixElement() {
+  var topbutton = document.getElementById("topBtn");
+  var footer = document.querySelector('footer');
+
+  var topbuttonRect = topbutton.getBoundingClientRect();
+  var footerRect = footer.getBoundingClientRect();
+
+  if (topbuttonRect.bottom + 15 >= footerRect.top) {
+    var newPosition = footerRect.top - topbuttonRect.height - 40;
+    topbutton.style.top = newPosition + 'px';
+  } else {
+    topbutton.style.top = "90%";
+  }
+}
+
+window.addEventListener('scroll', fixElement);
+window.addEventListener('resize', fixElement);
