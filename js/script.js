@@ -1,3 +1,7 @@
+function menuModal() {
+  console.log('oi')
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   var navItems = document.querySelectorAll('.navItem')
 
