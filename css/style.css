@@ -54,6 +54,8 @@ img {
   background: linear-gradient(60deg, var(--contrast-color) 60%, transparent);
   background-color: var(--contrast-color);
   transition: all .5s;
+
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.4);
 }
 
 #topBtn:hover {
@@ -235,6 +237,8 @@ main {
   outline: 2px solid;
 
   transition: all .3s;
+
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4);
 }
 
 .tech-box h1 {
@@ -279,6 +283,7 @@ main {
   gap: 30px;
   justify-content: center;
   padding-bottom: 80px;
+  
 }
 
 .project-box picture {
@@ -296,6 +301,7 @@ main {
   width: 800px;
   border-radius: 15px;
   transition: all .3s;
+  box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.4);
 }
 
 .project-box picture img:hover {
@@ -320,6 +326,8 @@ main {
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
+
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.4);
 }
 
 .project-aside h1 {
@@ -380,7 +388,6 @@ main {
 
 .extra:hover {
   background-color: var(--contrast-secondy-color);
-  width: 100%;
 }
 
 .project-aside button {
@@ -428,6 +435,8 @@ main {
   border-radius: 15px;
   outline: 2px solid;
   transition: all .4s;
+
+  box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.4);
 }
 
 .social-links li:hover {
