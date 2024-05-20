@@ -28,7 +28,7 @@ body {
   display: none!important;
 }
 
-img {
+img, #topBtn, #topBtn:hover, a {
   -webkit-user-drag: none;
   -khtml-user-drag: none;
   -moz-user-drag: none;
