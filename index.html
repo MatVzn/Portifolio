@@ -27,8 +27,33 @@
     </svg>
   </a>
 
-  <section class="modalmobile">
+  <section class="modalmobile hidden">
     
+    <div class="mobileClose">
+      <button class="closeButton" onclick="menuModal()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 24 24" 
+        fill="none" stroke="white" stroke-width="2" stroke-linecap="round" 
+        stroke-linejoin="round" class="lucide lucide-x">
+        <path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+
+    <nav class="navMobile">
+      <ul>
+        <li>
+          <a href="#aboutme" onclick="menuModal()">Sobre</a>
+        </li>
+        <li>
+          <a href="#techs" onclick="menuModal()">Tecnologias</a>
+        </li>
+        <li>
+          <a href="#projects" onclick="menuModal()">Projetos</a>
+        </li>
+        <li>
+          <a href="#social" onclick="menuModal()">Contato</a>
+        </li>
+      </ul>
+    </nav>
   </section>
 
   <header> 
@@ -324,10 +349,9 @@
     </div>
   </footer>
 
+  <script src="./js/script.js"></script>
   <script src="./js/wow.min.js"></script>
   <script>new WOW().init();</script>
 
 </body>
-
-  <script src="./js/script.js"></script>
 </html>

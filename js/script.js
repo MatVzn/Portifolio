@@ -1,5 +1,11 @@
 function menuModal() {
-  console.log('oi')
+  var mobileModal = document.querySelector('.modalmobile')
+
+  if (mobileModal.classList.contains("hidden")) {
+    mobileModal.classList.remove('hidden')
+  } else {
+    mobileModal.classList.add('hidden')
+  }
 }
 
 document.addEventListener('DOMContentLoaded', function() {

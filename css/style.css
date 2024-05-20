@@ -22,6 +22,7 @@
 body {
   font-family: "Outfit", sans-serif;
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 .hidden {
@@ -99,6 +100,58 @@ header {
   top: 0px;
 
   background-color: var(--bg-primary-color);
+}
+
+/* NAV MOBILE */
+
+.mobileClose {
+  display: grid;
+  place-items: center;
+}
+
+.mobileClose .closeButton {
+  background-color: transparent;
+  border: none;
+  margin-top: 80px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50px;
+  transition: transform .5s, background-color .5s;
+}
+
+.mobileClose .closeButton:hover {
+  transform: scale(1.3) rotate(90deg);
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.185);
+}
+
+.modalmobile {
+  margin-left: 55%;
+  width: 45%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  background-color: var(--contrast-color);
+}
+
+.navMobile ul {
+  list-style: none;
+  display: grid;
+  place-items: center;
+  gap: 20px;
+  margin-top: 150px;
+}
+
+.navMobile ul li a {
+  color: var(--text-color);
+  font-size: 30px;
+  border-radius: 10px;
+  transition: background-color .5s;
+  padding: 5px 10px
+}
+
+.navMobile ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.185);;
 }
 
 /* Title */
@@ -687,6 +740,10 @@ footer .name-link a:hover:after {
     gap: 50px;
   }
 
+  .modalmobile {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
