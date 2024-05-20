@@ -503,7 +503,7 @@ footer {
   gap: 60px;
   align-items: center;
   background-color: var(--card-color);
-  height: 100px;
+  height: 70px;
   font-weight: 300;
   text-align: center;
   font-size: 30px;
@@ -720,22 +720,21 @@ footer .name-link a:hover:after {
     display: block;
   }
 
+  #topBtn {
+    display: none;
+  }
+
 }
 
 @media (max-width: 800px) {
-  
-  #topBtn {
-    height: 46px;
-    width: 46px;
-  }
-
-  #topBtn svg {
-    height: 26;
-    width: 26px;
-  }
 
   .page-title {
     font-size: 24px;
+  }
+
+  footer {
+    font-size: 20px;
+    padding: 0 20px;
   }
 
   header {
