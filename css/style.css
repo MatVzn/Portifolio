@@ -41,7 +41,7 @@ img, #topBtn, #topBtn:hover, a {
   display: flex;
   opacity: 0;
   color: var(--text-color);
-  margin: 20px;
+  margin: 0px 40px;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -731,13 +731,13 @@ footer .name-link a:hover:after {
 @media (max-width: 800px) {
   
   #topBtn {
-    height: 42px;
-    width: 42px;
+    height: 46px;
+    width: 46px;
   }
 
   #topBtn svg {
-    height: 22;
-    width: 22px;
+    height: 26;
+    width: 26px;
   }
 
   .page-title {
