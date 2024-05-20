@@ -21,7 +21,7 @@
 body {
   font-family: "Outfit", sans-serif;
   color: var(--text-color);
-  overflow-x: hidden;
+  overflow-x: hidden!important;
 }
 
 .hidden {
@@ -41,7 +41,7 @@ img, #topBtn, #topBtn:hover, a {
   display: flex;
   opacity: 0;
   color: var(--text-color);
-  margin: 0px 40px;
+  margin: 20px;
   justify-content: center;
   align-items: center;
   position: fixed;
