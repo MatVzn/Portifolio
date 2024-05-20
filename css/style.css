@@ -720,10 +720,6 @@ footer .name-link a:hover:after {
     display: block;
   }
 
-  #topBtn {
-    display: none;
-  }
-
 }
 
 @media (max-width: 800px) {
