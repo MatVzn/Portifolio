@@ -3,8 +3,12 @@ function menuModal() {
 
   if (mobileModal.classList.contains("hidden")) {
     mobileModal.classList.remove('hidden')
+    document.body.style.overflow = 'hidden'
+    
   } else {
     mobileModal.classList.add('hidden')
+    document.body.style.overflow = 'visible'
+
   }
 }
 
@@ -53,6 +57,7 @@ function scrollFunction() {
 function fixElement() {
   var topbutton = document.getElementById("topBtn");
   var footer = document.querySelector('footer');
+  var mobileModal = document.querySelector('.modalmobile')
 
   var topbuttonRect = topbutton.getBoundingClientRect();
   var footerRect = footer.getBoundingClientRect();
@@ -63,6 +68,11 @@ function fixElement() {
   } else {
     topbutton.style.top = "90%";
   }
+  if (window.innerWidth > 980) {
+    mobileModal.classList.add('hidden')
+    document.body.style.overflow = 'visible'
+  }
+  
 }
 
 window.addEventListener('scroll', fixElement);
