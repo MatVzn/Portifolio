@@ -307,12 +307,6 @@ main {
   border-radius: 10px;
 }
 
-.tech-box:hover {
-  outline-color: white!important;
-  background-color: var(--bg-primary-color);
-  transform: scale(1.03);
-}
-
 /* PROJETCS AREA */
 
 .gold-hover {

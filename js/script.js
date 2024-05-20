@@ -68,6 +68,7 @@ function fixElement() {
   } else {
     topbutton.style.top = "90%";
   }
+  
   if (window.innerWidth > 980) {
     mobileModal.classList.add('hidden')
     document.body.style.overflow = 'visible'
