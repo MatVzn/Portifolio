@@ -39,7 +39,7 @@ const Techs = [
     {
         name: "github",
         description: "Repositórios",
-        color: "#5C6BC0"
+        color: "#3C74C1"
     },
     {
         name: "notion",
