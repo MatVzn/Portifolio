@@ -2,12 +2,12 @@ import { TechCard } from "./tech-card";
 
 const Techs = [
     {
-        name: "html",
+        name: "HTML",
         description: "Marcação",
         color: "#DD561F",
     },
     {
-        name: "css",
+        name: "CSS",
         description: "Estilização",
         color: "#1375B6",
     },
