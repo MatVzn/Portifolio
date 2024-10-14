@@ -59,7 +59,7 @@ export default function Home() {
             <div className='flex flex-col gap-8 xl:justify-center'>
 
               <div className="flex flex-row justify-between items-start gap-4 xl:gap-8 2xl:px-12">
-                <div className='min-w-24 xl:w-1/3 xl:min-w-72'>
+                <div className='min-w-24 xl:w-80 xl:min-w-80'>
                   <Image
                     src={MyPicture}
                     alt="My picture"
@@ -78,7 +78,7 @@ export default function Home() {
                   />
                 </div>
                 
-                <div className='hidden flex-col gap-4 xl:flex'>
+                <div className='hidden flex-col gap-4 xl:flex 2xl:text-left'>
                   <div>
                     <h1 className='text-3xl font-semibold'>Olá, eu sou o Matteo</h1>
                     <p className='text-xl text-green-500'>Desenvolvedor Front-End</p>

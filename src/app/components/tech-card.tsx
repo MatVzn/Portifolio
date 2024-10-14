@@ -13,7 +13,7 @@ export function TechCard({ description, name, color, imgName }: TechCardProps) {
     } as React.CSSProperties;
 
     return (
-        <div style={style} className={`hover:border-[var(--border-color)] min-w-64 max-w-72 max-h-[84px] gap-4 flex flex-row items-center justify-start p-4 bg-neutral-950 rounded-lg border-[1px] border-neutral-700 hover:bg-neutral-700/20 transition-all duration-200`}>
+        <div style={style} className={`hover:border-[var(--border-color)] min-w-72 max-h-[84px] gap-4 flex flex-row items-center justify-start p-4 bg-neutral-950 rounded-lg border-[1px] border-neutral-700 hover:bg-neutral-700/20 transition-all duration-200`}>
             <Image
                 src={"/logos/" + imgName + ".png"}
                 alt={name + "-logo"}
