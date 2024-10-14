@@ -11,7 +11,7 @@ let Techs = [
         name: "CSS",
         imgName: 'css',
         description: "Estilização",
-        color: "#1375B6",
+        color: "#274FE3",
     },
     {
         name: "javascript",

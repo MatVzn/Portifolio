@@ -46,7 +46,7 @@ export function Header() {
             </nav>
         </div>
 
-        <header className="z-20 bg-neutral-950 fixed w-full h-[66px] top-0 pl-6 border-b-[1px] border-zinc-700 items-center justify-between flex flex-row lg:hidden">
+        <header className="z-20 bg-neutral-950 fixed w-full h-[66px] top-0 pl-6 border-b-[1px] border-t-[1px] border-zinc-700 items-center justify-between flex flex-row lg:hidden">
             
             <a href="/" className="text-xl text-center font-medium hover:text-green-500 transition-all duration-200">
                 <h3>Matteo Vanzan</h3>

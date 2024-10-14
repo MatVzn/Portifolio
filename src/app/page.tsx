@@ -50,7 +50,7 @@ export default function Home() {
 
       </div>
 
-      <div className="flex flex-col lg:w-[calc(100dvw-240px)] lg:ml-60">
+      <div className="flex flex-col lg:w-[calc(100dvw-240px)] lg:ml-60 overflow-x-hidden">
 
         <Header/>
 
