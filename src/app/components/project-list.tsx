@@ -1,3 +1,4 @@
+import { ExternalLinkIcon } from "lucide-react";
 import { ProjectCard } from "./project-card"
 
 const Projects = [
@@ -37,7 +38,7 @@ export function ProjectList() {
 
     return(
         <>
-        <div className='w-auto flex flex-col gap-8 justify-start items-center md:hidden'>
+        <div className='w-auto h-auto flex flex-col gap-8 justify-start items-start md:hidden 2xl:grid-cols-3 2xl:grid'>
             {Projects.map((project) => (
                 <ProjectCard 
                     key={project.name}
@@ -52,7 +53,7 @@ export function ProjectList() {
             ))}
         </div>
         
-        <div className='hidden grid-cols-2 gap-8 md:grid'>
+        <div className='hidden grid-cols-2 gap-8 md:grid 2xl:hidden'>
             <div className="flex flex-col gap-8">
                 {firstColItems.map((project) => (
                     <ProjectCard 
@@ -82,6 +83,13 @@ export function ProjectList() {
                 ))}
             </div>
         </div>
+
+        <a href="https://github.com/MatVzn?tab=repositories" target="_blank" className="rounded-full hover:bg-neutral-700/20 text-zinc-400 hover:text-zinc-200 border-[1px] border-neutral-700 text-base transition-all duration-300 py-2 px-4">
+            <button className="flex flex-row gap-2 items-center justify-center">
+                <ExternalLinkIcon className="size-4"/>
+                <p className="pt-0.5">Mais projetos</p>
+            </button>
+        </a>
         </>
     )
 }

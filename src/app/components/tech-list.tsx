@@ -1,6 +1,6 @@
 import { TechCard } from "./tech-card";
 
-let Techs = [
+const Techs = [
     {
         name: "HTML",
         imgName: 'html',
@@ -66,7 +66,7 @@ let Techs = [
 export function TechList() {
     
     return(
-        <div className='w-auto flex flex-col gap-4 items-center justify-center sm:grid sm:grid-cols-2 sm:justify-items-center xl:grid-cols-3'>
+        <div className='w-auto flex flex-col gap-4 items-center justify-center sm:grid sm:grid-cols-2 sm:justify-items-center xl:grid-cols-3 2xl:grid-cols-4'>
             {Techs.map((tech) => (
                 <TechCard 
                     key={tech.name} 

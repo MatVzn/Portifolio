@@ -92,7 +92,7 @@ export function ProjectCard({ name, description, imagePath, year, stack, pageLin
             </div>
 
             <div className="flex flex-col gap-2 mb-4 mt-2">
-              <p className="flex items-center justify-center font-semibold text-base text-zinc-200 border-[1px] border-neutral-700 rounded-full">
+              <p className="flex items-center justify-center py-0.5 font-semibold text-base text-zinc-200 border-[1px] border-neutral-700 rounded-full">
                 {year}
               </p>
 
@@ -133,9 +133,9 @@ export function ProjectCard({ name, description, imagePath, year, stack, pageLin
                 <button 
                   disabled={pageLink === "none"} 
                   className={cn(
-                    'flex justify-center items-center bg-neutral-900 rounded-full p-3 border-[1px] border-neutral-700 text-zinc-400 hover:bg-neutral-700/20 hover:text-zinc-200 transition-all duration-200',
+                    'flex justify-center items-center bg-neutral-950 rounded-full p-3 border-[1px] border-neutral-700 text-zinc-400 hover:bg-neutral-900/20 hover:text-zinc-200 transition-all duration-200',
                     {
-                      'opacity-60 cursor-not-allowed hover:bg-neutral-900 hover:fill-zinc-400' : pageLink === "none"
+                      'opacity-60 cursor-not-allowed hover:bg-neutral-950 hover:fill-zinc-400' : pageLink === "none"
                     }
                   )}
                 >
@@ -147,9 +147,9 @@ export function ProjectCard({ name, description, imagePath, year, stack, pageLin
                 <button 
                   disabled={githubLink === "none"} 
                   className={cn(
-                    'flex justify-center items-center bg-neutral-900 rounded-full p-3 border-[1px] border-neutral-700 fill-zinc-400 hover:bg-neutral-700/20 hover:fill-zinc-200 transition-all duration-200',
+                    'flex justify-center items-center bg-neutral-950 rounded-full p-3 border-[1px] border-neutral-700 fill-zinc-400 hover:bg-neutral-900/20 hover:fill-zinc-200 transition-all duration-200',
                     {
-                      'opacity-60 cursor-not-allowed hover:bg-neutral-900 hover:fill-zinc-400' : githubLink === "none"
+                      'opacity-60 cursor-not-allowed hover:bg-neutral-950 hover:fill-zinc-400' : githubLink === "none"
                     }
                   )}
                 >

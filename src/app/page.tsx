@@ -55,21 +55,55 @@ export default function Home() {
         <Header/>
 
         <main className="h-auto flex flex-col px-6 pt-8 md:px-10">
-          <div className='min-h-[calc(100dvh-98px)] flex flex-col justify-between lg:min-h-[calc(100dvh-40px)]'>
-            <div className='flex flex-col gap-8'>
+          <div className='min-h-[calc(100dvh-168px)] flex flex-col justify-between lg:min-h-[calc(100dvh-112px)] 2xl:pt-12'>
+            <div className='flex flex-col gap-8 xl:justify-center'>
 
-              <div className="flex flex-row justify-between items-start ">
-                <div className='min-w-24'>
+              <div className="flex flex-row justify-between items-start gap-4 xl:gap-8 2xl:px-12">
+                <div className='min-w-24 xl:w-1/3 xl:min-w-72'>
                   <Image
                     src={MyPicture}
                     alt="My picture"
-                    className="rounded-md"
+                    className="rounded-md xl:hidden"
                     width={96}
                     height={96}
                     priority
                   />
+                  <Image
+                    src={MyPicture}
+                    alt="My picture"
+                    className="hidden rounded-md xl:block"
+                    width={288}
+                    height={288}
+                    priority
+                  />
                 </div>
-                <a href="#contact">
+                
+                <div className='hidden flex-col gap-4 xl:flex'>
+                  <div>
+                    <h1 className='text-3xl font-semibold'>Olá, eu sou o Matteo</h1>
+                    <p className='text-xl text-green-500'>Desenvolvedor Front-End</p>
+                  </div>
+
+                  <p className='text-lg text-zinc-400'>
+                    Atualmente estou estudando desenvolvimento web com foco front-end, criando interfaces responsivas e otimizadas. Tenho experiência em HTML, CSS, JavaScript, React e frameworks modernos. Sempre buscando melhorar a experiência do usuário.
+                  </p>
+
+                  <div className="flex flex-row gap-2">
+                    <CvButton/>
+                    <EmailButton/>
+                  </div>
+
+                  <div className='hidden sm:flex flex-row gap-4'>
+                    <IconButton href='https://github.com/MatVzn' target="_blank">
+                      <GithubIcon/>
+                    </IconButton>  
+                    <IconButton href='https://www.linkedin.com/in/matvzn/' target="_blank">
+                      <LinkedinIcon/>
+                    </IconButton>
+                  </div>
+                </div>
+
+                <a href="#contact" className="min-w-40">
                   <button className="py-2 px-4 items-center justify-center flex flex-row gap-3 rounded-full text-green-500 bg-green-900/30 hover:bg-green-900/50 transition-all duration-200">
                     <span className="flex items-center justify-center bg-green-500 min-w-2 min-h-2 rounded-full">
                       <span className="bg-green-500/70 min-w-2 min-h-2 rounded-full animate-ping"></span>
@@ -79,7 +113,7 @@ export default function Home() {
                 </a>
               </div>
 
-              <div className='flex flex-col gap-4'>
+              <div className='flex flex-col gap-4 xl:hidden'>
                 <div>
                   <h1 className='text-3xl font-semibold'>Olá, eu sou o Matteo</h1>
                   <p className='text-xl text-green-500'>Desenvolvedor Front-End</p>
@@ -105,10 +139,11 @@ export default function Home() {
               </div>
 
             </div>
-            <a href="#projects" className='scale-x-125 flex my-6 items-center justify-center'>
-              <ChevronDown className='text-zinc-400 hover:text-zinc-200 transition-all duration-200 animate-bounce'/>
-            </a>
           </div>
+
+          <a href="#projects" className='flex my-6 items-center justify-center xl:scale-150'>
+            <ChevronDown className='text-zinc-400 hover:text-zinc-200 transition-all duration-200 animate-bounce'/>
+          </a>
           
           <Line/>
 
