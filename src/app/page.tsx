@@ -93,7 +93,7 @@ export default function Home() {
                     <EmailButton/>
                   </div>
 
-                  <div className='hidden sm:flex flex-row gap-4'>
+                  <div className='hidden sm:flex flex-row gap-2'>
                     <IconButton href='https://github.com/MatVzn' target="_blank">
                       <GithubIcon/>
                     </IconButton>  
