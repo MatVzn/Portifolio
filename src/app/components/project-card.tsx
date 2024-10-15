@@ -52,7 +52,7 @@ export function ProjectCard({ name, description, imagePath, year, stack, pageLin
             />
           </div>
 
-          <div className='flex flex-col w-full px-6 pb-6'>
+          <div className='flex flex-col w-full px-6 pb-6 justify-between min-h-64'>
 
             <div>
               <div className="flex flex-row justify-between items-center">
@@ -89,78 +89,78 @@ export function ProjectCard({ name, description, imagePath, year, stack, pageLin
               )}>
                 {description}
               </p>
-            </div>
+            
+            
+              <div className="flex flex-col gap-2 mb-4 mt-2">
+                <p className="flex items-center justify-center py-0.5 font-semibold text-base text-zinc-200 border-[1px] border-neutral-700 rounded-full">
+                  {year}
+                </p>
 
-            <div className="flex flex-col gap-2 mb-4 mt-2">
-              <p className="flex items-center justify-center py-0.5 font-semibold text-base text-zinc-200 border-[1px] border-neutral-700 rounded-full">
-                {year}
-              </p>
-
-              <span className="grid grid-cols-2 flex-grow gap-2">
-                {(StackQuantity % 2 === 0 ? 
-                  stack.map((tech) => (
-                    <div className="rounded-full flex items-center justify-center bg-green-900/30 select-none hover:bg-green-900/50 transition-all duration-200 text-green-500 px-3 w-auto" key={tech}>
-                      {tech}
-                    </div>
-                  )) : (() => {
-                    let x = 0;
-                    let content = []
-                    while (x < StackQuantity) {
-                      {x === StackQuantity - 1 
-                        ? content.push(
-                          <div className="rounded-full flex col-span-2 items-center justify-center bg-green-900/30 select-none hover:bg-green-900/50 transition-all duration-200 text-green-500 px-3 w-auto" key={stack[x]}>
-                            {stack[x]} {/* Última tech da lista */}
-                          </div>
-                        ) 
-                        : content.push(
-                          <div className="rounded-full flex items-center justify-center bg-green-900/30 select-none hover:bg-green-900/50 transition-all duration-200 text-green-500 px-3 w-auto" key={stack[x]}>
-                            {stack[x]}
-                          </div>
-                        ) 
+                <span className="grid grid-cols-2 flex-grow gap-2">
+                  {(StackQuantity % 2 === 0 ? 
+                    stack.map((tech) => (
+                      <div className="rounded-full flex items-center justify-center bg-green-900/30 select-none hover:bg-green-900/50 transition-all duration-200 text-green-500 px-3 w-auto" key={tech}>
+                        {tech}
+                      </div>
+                    )) : (() => {
+                      let x = 0;
+                      let content = []
+                      while (x < StackQuantity) {
+                        {x === StackQuantity - 1 
+                          ? content.push(
+                            <div className="rounded-full flex col-span-2 items-center justify-center bg-green-900/30 select-none hover:bg-green-900/50 transition-all duration-200 text-green-500 px-3 w-auto" key={stack[x]}>
+                              {stack[x]} {/* Última tech da lista */}
+                            </div>
+                          ) 
+                          : content.push(
+                            <div className="rounded-full flex items-center justify-center bg-green-900/30 select-none hover:bg-green-900/50 transition-all duration-200 text-green-500 px-3 w-auto" key={stack[x]}>
+                              {stack[x]}
+                            </div>
+                          ) 
+                        }
+                        x++
                       }
-                      x++
-                    }
-                    return content;
-                  })()
-                )}
-              </span>
-
+                      return content;
+                    })()
+                  )}
+                </span>
+              </div>
             </div>
 
             <div className='flex flex-row gap-2 items-center w-full'>
 
-              <Link href={pageLink} target="_blank" className="rounded-full">
-                <button 
-                  disabled={pageLink === "none"} 
-                  className={cn(
-                    'flex justify-center items-center bg-neutral-950 rounded-full p-3 border-[1px] border-neutral-700 text-zinc-400 hover:bg-neutral-900/20 hover:text-zinc-200 transition-all duration-200',
-                    {
-                      'opacity-60 cursor-not-allowed hover:bg-neutral-950 hover:fill-zinc-400' : pageLink === "none"
-                    }
-                  )}
-                >
-                  <ExternalLinkIcon className='size-4'/> 
-                </button>
-              </Link>
+                <Link href={pageLink} target="_blank" className="rounded-full">
+                  <button 
+                    disabled={pageLink === "none"} 
+                    className={cn(
+                      'flex justify-center items-center bg-neutral-950 rounded-full p-3 border-[1px] border-neutral-700 text-zinc-400 hover:bg-neutral-900/20 hover:text-zinc-200 transition-all duration-200',
+                      {
+                        'opacity-60 cursor-not-allowed hover:bg-neutral-950 hover:fill-zinc-400' : pageLink === "none"
+                      }
+                    )}
+                  >
+                    <ExternalLinkIcon className='size-4'/> 
+                  </button>
+                </Link>
 
-              <Link href={githubLink} target="_blank" className="rounded-full">
-                <button 
-                  disabled={githubLink === "none"} 
-                  className={cn(
-                    'flex justify-center items-center bg-neutral-950 rounded-full p-3 border-[1px] border-neutral-700 fill-zinc-400 hover:bg-neutral-900/20 hover:fill-zinc-200 transition-all duration-200',
-                    {
-                      'opacity-60 cursor-not-allowed hover:bg-neutral-950 hover:fill-zinc-400' : githubLink === "none"
-                    }
-                  )}
-                >
-                  <div className="size-4 flex justify-center items-center">
-                    <GithubIcon/> 
-                  </div>
-                </button>
-              </Link>
+                <Link href={githubLink} target="_blank" className="rounded-full">
+                  <button 
+                    disabled={githubLink === "none"} 
+                    className={cn(
+                      'flex justify-center items-center bg-neutral-950 rounded-full p-3 border-[1px] border-neutral-700 fill-zinc-400 hover:bg-neutral-900/20 hover:fill-zinc-200 transition-all duration-200',
+                      {
+                        'opacity-60 cursor-not-allowed hover:bg-neutral-950 hover:fill-zinc-400' : githubLink === "none"
+                      }
+                    )}
+                  >
+                    <div className="size-4 flex justify-center items-center">
+                      <GithubIcon/> 
+                    </div>
+                  </button>
+                </Link>
 
             </div>
-
+            
           </div>
         </div>
     )

@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from "@/lib/utils";
-import { ChevronLeftIcon, CircleUserRoundIcon, FolderIcon, HomeIcon, MailIcon } from "lucide-react";
+import { CircleUserRoundIcon, FolderIcon, HomeIcon, MailIcon, MinusIcon } from "lucide-react";
 import { useState } from "react";
 import { NavLink } from "./nav-link";
 
@@ -53,17 +53,23 @@ export function Header() {
             </a>
 
             <div className="flex flex-row">
-                <button onClick={mobileModalSwitch} className="rounded-l-full fixed top-0 right-0 border-[1px] border-r-0 border-neutral-700 hover:bg-neutral-700/20 text-zinc-400 hover:text-zinc-200 transition-transform duration-200">
-                    <ChevronLeftIcon className={cn(
-                        "transition-all duration-300 p-5 size-full rounded-l-full",
+                <button onClick={mobileModalSwitch} className="flex flex-col rounded-l-full fixed top-0 right-0 border-[1px] border-r-0 border-neutral-700 hover:bg-neutral-700/20 text-zinc-400 hover:text-zinc-200 transition-transform duration-200">
+                    <MinusIcon className={cn(
+                        "transition-all duration-300 size-10 fixed top-[13px] translate-x-[14px] -translate-y-[7px] scale-y-75 scale-x-75",
                         {
-                            "-rotate-90 rounded-t-full translate-y-[-3px]" : isModalOpen
+                            "-rotate-45 translate-y-0" : isModalOpen
                         }
                     )}/>
-                    <ChevronLeftIcon className={cn(
-                        "opacity-100 transition-all duration-300 top-[1px] fixed size-16 p-5",
+                    <MinusIcon className={cn(
+                        "transition-all duration-300 size-16 p-3 translate-x-[2px] scale-y-75 scale-x-75",
                         {
-                            "opacity-100 top-[4px] right-[0px] -rotate-[270deg]" : isModalOpen
+                            "opacity-0" : isModalOpen
+                        }
+                    )}/>
+                    <MinusIcon className={cn(
+                        "transition-all duration-300 size-10 fixed top-[13px] translate-x-[14px] translate-y-[7px] scale-y-75 scale-x-75",
+                        {
+                            "rotate-45 translate-y-0" : isModalOpen
                         }
                     )}/>
                 </button>

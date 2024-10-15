@@ -59,7 +59,7 @@ export default function Home() {
             <div className='flex flex-col gap-8 xl:justify-center'>
 
               <div className="flex flex-row justify-between items-start gap-4 xl:gap-8 2xl:px-12">
-                <div className='min-w-24 xl:w-80 xl:min-w-80'>
+                <div className='min-w-24 xl:min-w-80'>
                   <Image
                     src={MyPicture}
                     alt="My picture"
@@ -72,8 +72,8 @@ export default function Home() {
                     src={MyPicture}
                     alt="My picture"
                     className="hidden rounded-md xl:block"
-                    width={288}
-                    height={288}
+                    width={320}
+                    height={320}
                     priority
                   />
                 </div>
