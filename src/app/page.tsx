@@ -1,20 +1,20 @@
 import Image from "next/image";
 import MyPicture from "@/../public/eu.jpg"
 
-import { Footer } from "./components/footer";
-import { Header } from "./components/header";
+import { Footer } from "../components/footer";
+import { Header } from "../components/header";
 import { GithubIcon } from "../../public/github";
-import { IconButton } from "./components/icon-button";
+import { IconButton } from "../components/icon-button";
 import { LinkedinIcon } from "../../public/linkedin";
 import { ChevronDown, CircleUserRoundIcon, FolderIcon, HomeIcon, MailIcon } from "lucide-react";
-import { Line } from "./components/line";
-import { ProjectCard } from "./components/project-card";
-import { Title } from "./components/title";
-import { TechList } from "./components/tech-list";
-import { ProjectList } from "./components/project-list";
-import { CvButton } from "./components/cv-button";
-import { EmailButton } from "./components/email-button";
-import { NavLink } from "./components/nav-link";
+import { Line } from "../components/line";
+import { ProjectCard } from "../components/project-card";
+import { Title } from "../components/title";
+import { TechList } from "../components/tech-list";
+import { ProjectList } from "../components/project-list";
+import { CvButton } from "../components/cv-button";
+import { EmailButton } from "../components/email-button";
+import { NavLink } from "../components/nav-link";
 
 export default function Home() {
   return (

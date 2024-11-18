@@ -3,7 +3,7 @@
 import { EllipsisVerticalIcon, ExternalLinkIcon, XIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { GithubIcon } from "../../../public/github";
+import { GithubIcon } from "../../public/github";
 import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
 

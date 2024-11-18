@@ -1,5 +1,5 @@
-import { GithubIcon } from "../../../public/github";
-import { LinkedinIcon } from "../../../public/linkedin";
+import { GithubIcon } from "../../public/github";
+import { LinkedinIcon } from "../../public/linkedin";
 import { CvButton } from "./cv-button";
 import { EmailButton } from "./email-button";
 import { IconButton } from "./icon-button";
