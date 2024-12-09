@@ -26,6 +26,12 @@ const Techs = [
         color: "#00D8FE",
     },
     {
+        name:"vue",
+        imgName: 'vue',
+        description: 'Biblioteca',
+        color: "#54BC8B"
+    },
+    {
         name: "tailwind",
         imgName: 'tailwind',
         description: "Framework",
