@@ -30,10 +30,6 @@ export default function Home() {
         </div>
 
         <nav className="flex flex-col">
-          <NavLink href="/">
-            <HomeIcon strokeWidth="2px" size={18}/>
-            Home
-          </NavLink>
           <NavLink href="#about">
             <CircleUserRoundIcon strokeWidth="2px" size={18}/>
             Sobre
@@ -56,9 +52,9 @@ export default function Home() {
 
         <main className="h-auto flex flex-col px-6 pt-8 md:px-10">
           <div className='min-h-[calc(100dvh-168px)] flex flex-col justify-between lg:min-h-[calc(100dvh-112px)] 2xl:pt-12'>
-            <div className='flex flex-col gap-8 xl:justify-center'>
+            <div className='flex flex-col gap-4 sm:gap-8 xl:justify-center'>
 
-              <div className="flex flex-row justify-between items-start gap-4 xl:gap-8 2xl:px-12">
+              <div className="flex flex-col min-[340px]:flex-row justify-between items-start gap-4 xl:gap-8 2xl:px-12">
                 <div className='min-w-24 xl:min-w-80'>
                   <Image
                     src={MyPicture}
@@ -103,14 +99,15 @@ export default function Home() {
                   </div>
                 </div>
 
-                <a href="#contact" className="min-w-40">
-                  <button className="py-2 px-4 items-center justify-center flex flex-row gap-3 rounded-full text-green-500 bg-green-900/30 hover:bg-green-900/50 transition-all duration-200">
-                    <span className="flex items-center justify-center bg-green-500 min-w-2 min-h-2 rounded-full">
-                      <span className="bg-green-500/70 min-w-2 min-h-2 rounded-full animate-ping"></span>
+                {/* Tag <a> e depois <button> com href="#contact" aqui abaixo */}
+                <div className="w-auto min-w-[180px]">
+                  <div className="py-2 px-4 items-center justify-center flex flex-row gap-3 rounded-full text-indigo-500 bg-indigo-900/30 hover:bg-indigo-900/50 transition-all duration-200">
+                    <span className="flex items-center justify-center bg-indigo-500 min-w-2 min-h-2 rounded-full">
+                      <span className="bg-indigo-500/70 min-w-2 min-h-2 rounded-full animate-ping"></span>
                     </span> 
-                    <p className='text-sm line-clamp-1 sm:text-base'>Open to Work</p>
-                  </button>
-                </a>
+                    <p className='line-clamp-1 text-base'>Working at GoMind</p>
+                  </div>
+                </div>
               </div>
 
               <div className='flex flex-col gap-4 xl:hidden'>

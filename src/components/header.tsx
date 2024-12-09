@@ -27,10 +27,6 @@ export function Header() {
                     "opacity-100 delay-200" : isModalOpen
                 }
             )}>
-                <NavLink onClick={mobileModalSwitch} href="/">
-                    <HomeIcon strokeWidth="2px" size={18}/>
-                    Home
-                </NavLink>
                 <NavLink onClick={mobileModalSwitch} href="#about">
                     <CircleUserRoundIcon strokeWidth="2px" size={18}/>
                     Sobre
