@@ -1,14 +1,16 @@
 'use client'
 
 import { cn } from "@/lib/utils"
-import { DownloadIcon } from "lucide-react"
 import { ComponentProps, useState } from "react"
+import { DownloadIcon } from "../../public/animated-icons/download-icon";
+import { useEffect } from "react";
 
 interface CvButtonProps extends ComponentProps<'a'> {}
 
 export function CvButton({ href, children, type, ...props } : CvButtonProps) {
 
     const [isClicked, setIsClicked] = useState(false);
+    const [isHovered, setIsHovered] = useState(false)
 
     function handleCopy() {
         navigator.clipboard.writeText("matteovoleite@gmail.com")
@@ -19,7 +21,14 @@ export function CvButton({ href, children, type, ...props } : CvButtonProps) {
     }
 
     return (
-        <a {...props} href="/curriculo.pdf" download="MatteoCurrículo.pdf">
+        <a 
+            {...props} 
+            id="cvButton" 
+            href="/curriculo.pdf" 
+            download="MatteoCurrículo.pdf"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
             <button     
                 onClick={handleCopy}
                 disabled={isClicked} 
@@ -29,7 +38,7 @@ export function CvButton({ href, children, type, ...props } : CvButtonProps) {
                         "bg-green-900/20 text-green-500 hover:bg-green-900/20 hover:text-green-500" : isClicked
                     }
                 )}>
-                <DownloadIcon className="w-4 transition-all duration-300"/> 
+                <DownloadIcon isHovered={isHovered}/> 
                 <span className={cn(
                     "flex-1 pt-0.5 truncate absolute translate-x-6 transition-all duration-300",
                     {

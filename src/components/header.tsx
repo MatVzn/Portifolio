@@ -1,9 +1,12 @@
 'use client'
 
 import { cn } from "@/lib/utils";
-import { CircleUserRoundIcon, FolderIcon, HomeIcon, MailIcon, MinusIcon } from "lucide-react";
 import { useState } from "react";
 import { NavLink } from "./nav-link";
+import { MenuIcon } from "../../public/animated-icons/menu-icon";
+import { UserIcon } from "../../public/animated-icons/user-icon";
+import { GripIcon } from "../../public/animated-icons/grip-icon";
+import { AtSignIcon } from "../../public/animated-icons/at-sign-icon";
 
 export function Header() {
 
@@ -27,16 +30,16 @@ export function Header() {
                     "opacity-100 delay-200" : isModalOpen
                 }
             )}>
-                <NavLink onClick={mobileModalSwitch} href="#about">
-                    <CircleUserRoundIcon strokeWidth="2px" size={18}/>
+                <NavLink id="aboutIcon2" href="#about">
+                    <UserIcon parentSelector="#aboutIcon2"/>
                     Sobre
                 </NavLink>
-                <NavLink onClick={mobileModalSwitch} href="#projects">
-                    <FolderIcon strokeWidth="2px" size={18}/>
+                <NavLink id="projectsButton2" href="#projects">
+                    <GripIcon parentSelector="#projectsButton2"/>
                     Projetos
                 </NavLink>
-                <NavLink onClick={mobileModalSwitch} href="#contact">
-                    <MailIcon strokeWidth="2px" size={18}/>
+                <NavLink id="contactButton2" href="#contact">
+                    <AtSignIcon parentSelector="#contactButton2"/>
                     Contato 
                 </NavLink>
             </nav>
@@ -49,25 +52,8 @@ export function Header() {
             </a>
 
             <div className="flex flex-row">
-                <button onClick={mobileModalSwitch} className="flex flex-col rounded-l-full fixed top-0 right-0 border-[1px] border-r-0 border-neutral-700 hover:bg-neutral-700/20 text-zinc-400 hover:text-zinc-200 transition-transform duration-200">
-                    <MinusIcon className={cn(
-                        "transition-all duration-300 size-10 fixed top-[13px] translate-x-[14px] -translate-y-[7px] scale-y-75 scale-x-75",
-                        {
-                            "-rotate-45 translate-y-0" : isModalOpen
-                        }
-                    )}/>
-                    <MinusIcon className={cn(
-                        "transition-all duration-300 size-16 p-3 translate-x-[2px] scale-y-75 scale-x-75",
-                        {
-                            "opacity-0" : isModalOpen
-                        }
-                    )}/>
-                    <MinusIcon className={cn(
-                        "transition-all duration-300 size-10 fixed top-[13px] translate-x-[14px] translate-y-[7px] scale-y-75 scale-x-75",
-                        {
-                            "rotate-45 translate-y-0" : isModalOpen
-                        }
-                    )}/>
+                <button onClick={mobileModalSwitch} className="p-[18px] flex flex-col rounded-l-full fixed top-0 right-0 border-[1px] border-r-0 border-neutral-700 hover:bg-neutral-700/20 text-zinc-400 hover:text-zinc-200 transition-transform duration-200">
+                    <MenuIcon isModalOpen={isModalOpen}/>
                 </button>
             </div>
             

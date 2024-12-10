@@ -3,10 +3,9 @@ import MyPicture from "@/../public/eu.jpg"
 
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
-import { GithubIcon } from "../../public/github";
 import { IconButton } from "../components/icon-button";
 import { LinkedinIcon } from "../../public/linkedin";
-import { ChevronDown, CircleUserRoundIcon, FolderIcon, MailIcon } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { Line } from "../components/line";
 import { Title } from "../components/title";
 import { TechList } from "../components/tech-list";
@@ -14,6 +13,10 @@ import { ProjectList } from "../components/project-list";
 import { CvButton } from "../components/cv-button";
 import { EmailButton } from "../components/email-button";
 import { NavLink } from "../components/nav-link";
+import { GripIcon } from "../../public/animated-icons/grip-icon";
+import { UserIcon } from "../../public/animated-icons/user-icon";
+import { AtSignIcon } from "../../public/animated-icons/at-sign-icon";
+import { GithubIcon } from "../../public/animated-icons/github-icon";
 
 export default function Home() {
   return (
@@ -29,16 +32,16 @@ export default function Home() {
         </div>
 
         <nav className="flex flex-col">
-          <NavLink href="#about">
-            <CircleUserRoundIcon strokeWidth="2px" size={18}/>
+          <NavLink id="aboutIcon" href="#about">
+            <UserIcon parentSelector="#aboutIcon"/>
             Sobre
           </NavLink>
-          <NavLink href="#projects">
-            <FolderIcon strokeWidth="2px" size={18}/>
+          <NavLink id="projectsButton" href="#projects">
+            <GripIcon parentSelector="#projectsButton"/>
             Projetos
           </NavLink>
-          <NavLink href="#contact">
-            <MailIcon strokeWidth="2px" size={18}/>
+          <NavLink id="contactButton" href="#contact">
+            <AtSignIcon parentSelector="#contactButton"/>
             Contato 
           </NavLink>
         </nav>
@@ -89,8 +92,8 @@ export default function Home() {
                   </div>
 
                   <div className='hidden sm:flex flex-row gap-2'>
-                    <IconButton href='https://github.com/MatVzn' target="_blank">
-                      <GithubIcon/>
+                    <IconButton id="githubButton1" href='https://github.com/MatVzn' target="_blank">
+                      <GithubIcon size={20} parentSelector="#githubButton1"/>
                     </IconButton>  
                     <IconButton href='https://www.linkedin.com/in/matvzn/' target="_blank">
                       <LinkedinIcon/>
@@ -104,7 +107,7 @@ export default function Home() {
                     <span className="flex items-center justify-center bg-indigo-500 min-w-2 min-h-2 rounded-full">
                       <span className="bg-indigo-500/70 min-w-2 min-h-2 rounded-full animate-ping"></span>
                     </span> 
-                    <p className='line-clamp-1 text-base'>Working at GoMind</p>
+                    <p className='line-clamp-1 text-base select-none'>Working at GoMind</p>
                   </div>
                 </div>
               </div>
@@ -125,8 +128,8 @@ export default function Home() {
                 </div>
 
                 <div className='hidden sm:flex flex-row gap-4'>
-                  <IconButton href='https://github.com/MatVzn' target="_blank">
-                      <GithubIcon/>
+                  <IconButton id="githubButton2" href='https://github.com/MatVzn' target="_blank">
+                      <GithubIcon size={20} parentSelector="#githubButton2"/>
                   </IconButton>  
                   <IconButton href='https://www.linkedin.com/in/matvzn/' target="_blank">
                       <LinkedinIcon/>

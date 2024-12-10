@@ -3,9 +3,9 @@
 import { EllipsisVerticalIcon, ExternalLinkIcon, XIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { GithubIcon } from "../../public/github";
 import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
+import { GithubIcon } from "../../public/animated-icons/github-icon";
 
 interface ProjectCardProps {
   name: string
@@ -22,6 +22,7 @@ export function ProjectCard({ name, description, imagePath, year, stack, pageLin
     let StackQuantity = stack.length
 
     const [isDescriptionOpen, setIsDescriptionOpen] = useState<boolean>(false)
+    const [isHovered, setIsHovered] = useState<boolean>(false)
     const [height, setHeight] = useState<string | number>('auto');
     const descriptionRef = useRef<HTMLParagraphElement>(null);
 
@@ -40,7 +41,11 @@ export function ProjectCard({ name, description, imagePath, year, stack, pageLin
     }, [isDescriptionOpen]);
 
     return (
-        <div className='overflow-hidden h-auto transition-all duration-500 ease-in-out w-full bg-zinc-800/20 max-w-80 flex flex-col items-center rounded-3xl gap-5'>
+        <div 
+          className='overflow-hidden h-auto transition-all duration-500 ease-in-out w-full bg-zinc-800/20 max-w-80 flex flex-col items-center rounded-3xl gap-5'
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
               
           <div className='object-cover relative overflow-hidden w-full h-44 rounded-t-3xl'>
             <Image
@@ -147,14 +152,14 @@ export function ProjectCard({ name, description, imagePath, year, stack, pageLin
                   <button 
                     disabled={githubLink === "none"} 
                     className={cn(
-                      'flex justify-center items-center bg-neutral-950 rounded-full p-3 border-[1px] border-neutral-700 fill-zinc-400 hover:bg-neutral-900/20 hover:fill-zinc-200 transition-all duration-200',
+                      'flex justify-center items-center text-zinc-400 hover:text-zinc-200 bg-neutral-950 rounded-full p-3 border-[1px] border-neutral-700 fill-zinc-400 hover:bg-neutral-900/20 hover:fill-zinc-200 transition-all duration-200',
                       {
-                        'opacity-60 cursor-not-allowed hover:bg-neutral-950 hover:fill-zinc-400' : githubLink === "none"
+                        'opacity-60 cursor-not-allowed hover:bg-neutral-950 hover:fill-zinc-400 hover:text-zinc-400' : githubLink === "none"
                       }
                     )}
                   >
                     <div className="size-4 flex justify-center items-center">
-                      <GithubIcon/> 
+                      <GithubIcon size={16} parentSelector="none"/> 
                     </div>
                   </button>
                 </Link>

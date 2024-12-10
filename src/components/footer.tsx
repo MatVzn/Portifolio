@@ -1,4 +1,4 @@
-import { GithubIcon } from "../../public/github";
+import { GithubIcon } from "../../public/animated-icons/github-icon";
 import { LinkedinIcon } from "../../public/linkedin";
 import { CvButton } from "./cv-button";
 import { EmailButton } from "./email-button";
@@ -9,8 +9,8 @@ export function Footer() {
         <footer id="contact" className="mt-10 flex flex-col items-center justify-center pb-10">
             <div className="flex flex-col gap-4 items-center justify-center sm:flex-row">
                 <div className='flex flex-row gap-2'>
-                    <IconButton href='https://github.com/MatVzn' target="_blank">
-                        <GithubIcon/>
+                    <IconButton id="githubButton3" href='https://github.com/MatVzn' target="_blank">
+                        <GithubIcon size={20} parentSelector="#githubButton3"/>
                     </IconButton>  
                     <IconButton href='https://www.linkedin.com/in/matvzn/' target="_blank">
                         <LinkedinIcon/>
