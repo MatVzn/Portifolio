@@ -10,7 +10,7 @@ const bodyVariants: Variants = {
     pathLength: 1,
     scale: 1,
     transition: {
-      duration: 0.3,
+      duration: 0.5,
     },
   },
   animate: {
@@ -18,7 +18,7 @@ const bodyVariants: Variants = {
     pathLength: [0, 1],
     scale: [0.9, 1],
     transition: {
-      duration: 0.4,
+      duration: 0.6,
     },
   },
 };

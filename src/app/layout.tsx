@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 import { Catamaran } from 'next/font/google'
+import { SnowfallComponent } from '@/components/snow-fall'
 
 const catamaran = Catamaran({
   subsets: ['latin'],
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body className='antialiased bg-neutral-950 text-zinc-200'>
         {children}
       </body>
+      <SnowfallComponent/>
     </html>
   )
 }
