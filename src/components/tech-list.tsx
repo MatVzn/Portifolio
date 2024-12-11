@@ -44,6 +44,12 @@ const Techs = [
         color: "#027BCD",
     },
     {
+        name: "Next.js",
+        imgName: 'nextjs',
+        description: "Framework",
+        color: "#FFF"
+    },
+    {
         name: "git",
         imgName: 'git',
         description: "Versionamento",
