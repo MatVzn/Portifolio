@@ -28,7 +28,7 @@ const Techs = [
     {
         name:"vue",
         imgName: 'vue',
-        description: 'Biblioteca',
+        description: 'Framework',
         color: "#54BC8B"
     },
     {

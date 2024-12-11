@@ -62,7 +62,6 @@ export function GithubIcon({size, parentSelector}: GithubIconProps) {
     const parent = document.querySelector(parentSelector);
 
     if (!parent) {
-      console.error(`Parent element with selector "${parentSelector}" not found.`);
       return;
     }
 

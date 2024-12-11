@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <div className="flex flex-col lg:flex-row">
 
-      <div className="hidden overflow-y-hidden lg:block w-60 h-full bg-neutral-950 z-20 border-r-[1px] border-neutral-700 fixed">
+      <aside className="hidden overflow-y-hidden lg:block w-60 h-full bg-neutral-950 z-20 border-r-[1px] border-neutral-700 fixed">
 
         <div className="h-32 border-b-[1px] border-neutral-700 items-start flex flex-col justify-center pl-7">
           <a href="/">
@@ -46,7 +46,7 @@ export default function Home() {
           </NavLink>
         </nav>
 
-      </div>
+      </aside>
 
       <div className="flex flex-col lg:w-[calc(100dvw-240px)] lg:ml-60 overflow-x-hidden">
 
