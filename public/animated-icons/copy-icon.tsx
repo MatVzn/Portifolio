@@ -12,17 +12,17 @@ const defaultTransition: Transition = {
 };
 
 interface CopyIconProps {
-    isHovered: boolean
+    isClicked: boolean
 }
 
-export function CopyIcon({isHovered}: CopyIconProps) {
+export function CopyIcon({isClicked}: CopyIconProps) {
   const controls = useAnimation();
     
   useEffect(() => {
-    isHovered
+    isClicked
     ? controls.start('animate')
     : controls.start('normal')
-  },[isHovered])
+  },[isClicked])
 
   return (
     <div

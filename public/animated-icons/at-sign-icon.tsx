@@ -2,7 +2,7 @@
 
 import type { Variants } from 'motion/react';
 import { motion, useAnimation } from 'motion/react';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 const circleVariants: Variants = {
   normal: {
@@ -47,11 +47,12 @@ const pathVariants: Variants = {
 };
 
 interface AtSignIconProps {
-  parentSelector: string
+  parentSelector: string;
 }
 
-export function AtSignIcon({parentSelector}: AtSignIconProps) {
+export function AtSignIcon({ parentSelector }: AtSignIconProps) {
   const controls = useAnimation();
+  const isAnimating = useRef(false); // Controle de estado da animação
 
   useEffect(() => {
     const parent = document.querySelector(parentSelector);
@@ -62,27 +63,31 @@ export function AtSignIcon({parentSelector}: AtSignIconProps) {
     }
 
     const handleMouseEnter = () => {
-        controls.start('animate');
-    };
-
-    const handleMouseLeave = () => {
-        controls.start('normal');
+      if (isAnimating.current) return; // Bloqueia reinício enquanto animação está ativa
+      isAnimating.current = true;
+      controls.start('animate').then(() => {
+        isAnimating.current = false; // Libera após a animação concluir
+      });
     };
 
     parent.addEventListener('mouseenter', handleMouseEnter);
-    parent.addEventListener('mouseleave', handleMouseLeave);
 
     return () => {
       parent.removeEventListener('mouseenter', handleMouseEnter);
-      parent.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, [parentSelector]);
+  }, [parentSelector, controls]);
 
   return (
     <div
       className="cursor-pointer select-none p-2 hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center"
-      onMouseEnter={() => controls.start('animate')}
-      onMouseLeave={() => controls.start('normal')}
+      onMouseEnter={() => {
+        if (!isAnimating.current) {
+          isAnimating.current = true;
+          controls.start('animate').then(() => {
+            isAnimating.current = false;
+          });
+        }
+      }}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -110,4 +115,4 @@ export function AtSignIcon({parentSelector}: AtSignIconProps) {
       </svg>
     </div>
   );
-};
+}

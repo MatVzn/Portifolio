@@ -60,6 +60,7 @@ export function GithubIcon({size, parentSelector}: GithubIconProps) {
 
   useEffect(() => {
     const parent = document.querySelector(parentSelector);
+    tailControls.start("wag")
 
     if (!parent) {
       return;
@@ -71,18 +72,8 @@ export function GithubIcon({size, parentSelector}: GithubIconProps) {
         tailControls.start('wag');
     };
 
-    const handleMouseLeave = () => {
-        bodyControls.start('normal');
-        tailControls.start('normal');
-    };
-
     parent.addEventListener('mouseenter', handleMouseEnter);
-    parent.addEventListener('mouseleave', handleMouseLeave);
 
-    return () => {
-      parent.removeEventListener('mouseenter', handleMouseEnter);
-      parent.removeEventListener('mouseleave', handleMouseLeave);
-    };
   }, [parentSelector]);
 
   return (

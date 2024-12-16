@@ -54,7 +54,7 @@ export default function Home() {
         <Header/>
 
         <main className="h-auto flex flex-col px-6 pt-8 md:px-10">
-          <div className='min-h-[calc(100dvh-168px)] flex flex-col justify-between lg:min-h-[calc(100dvh-112px)] 2xl:pt-12'>
+          <div className='min-h-[calc(100vh-168px)] flex flex-col justify-between lg:min-h-[calc(100dvh-112px)] 2xl:pt-12'>
             <div className='flex flex-col gap-4 sm:gap-8 xl:justify-center'>
 
               <div className="flex flex-col min-[350px]:flex-row justify-between items-start gap-4 xl:gap-8 2xl:px-12">

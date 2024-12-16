@@ -2,8 +2,7 @@
 
 import type { Variants } from 'motion/react';
 import { motion, useAnimation } from 'motion/react';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const pathVariant: Variants = {
   normal: { pathLength: 1, opacity: 1, pathOffset: 0 },
@@ -28,41 +27,36 @@ const circleVariant: Variants = {
 };
 
 interface UserIconProps {
-    parentSelector: string
+  parentSelector: string;
 }
 
-export function UserIcon({parentSelector}: UserIconProps) {
+export function UserIcon({ parentSelector }: UserIconProps) {
   const controls = useAnimation();
+  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     const parent = document.querySelector(parentSelector);
 
     if (!parent) {
-      console.error(`Parent element with selector "${parentSelector}" not found.`);
       return;
     }
 
     const handleMouseEnter = () => {
-        controls.start('animate');
-    };
-
-    const handleMouseLeave = () => {
-        controls.start('normal');
+      if (!isAnimating) {
+        setIsAnimating(true);
+        controls.start('animate').then(() => setIsAnimating(false));
+      }
     };
 
     parent.addEventListener('mouseenter', handleMouseEnter);
-    parent.addEventListener('mouseleave', handleMouseLeave);
 
     return () => {
       parent.removeEventListener('mouseenter', handleMouseEnter);
-      parent.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, [parentSelector]);
+  }, [parentSelector, isAnimating, controls]);
 
   return (
-    <div
-      className="cursor-pointer select-none p-2 hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center"
-    >
+    <div className="cursor-pointer select-none p-2 hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="20"
@@ -98,4 +92,4 @@ export function UserIcon({parentSelector}: UserIconProps) {
       </svg>
     </div>
   );
-};
+}

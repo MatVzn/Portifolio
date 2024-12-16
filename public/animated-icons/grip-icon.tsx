@@ -40,6 +40,7 @@ export function GripIcon({parentSelector}: GripIconProps) {
             duration: 0.2,
           },
         }));
+        setIsHovered(false)
       }
     };
 
@@ -58,16 +59,10 @@ export function GripIcon({parentSelector}: GripIconProps) {
       setIsHovered(true);
     };
 
-    const handleMouseLeave = () => {
-      setIsHovered(false);
-    };
-
     parent.addEventListener('mouseenter', handleMouseEnter);
-    parent.addEventListener('mouseleave', handleMouseLeave);
 
     return () => {
       parent.removeEventListener('mouseenter', handleMouseEnter);
-      parent.removeEventListener('mouseleave', handleMouseLeave);
     };
   }, [parentSelector]);
 

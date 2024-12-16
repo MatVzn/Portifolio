@@ -9,7 +9,6 @@ interface EmailButtonProps extends ComponentProps<'button'> {}
 export function EmailButton({ } : EmailButtonProps) {
     
     const [isClicked, setIsClicked] = useState(false);
-    const [isHovered, setIsHovered] = useState(false);
 
     function handleCopy() {
         navigator.clipboard.writeText("matteovoleite@gmail.com")
@@ -23,15 +22,13 @@ export function EmailButton({ } : EmailButtonProps) {
         <button     
             onClick={handleCopy}
             disabled={isClicked}
-            onMouseEnter={() => setIsHovered(true)} 
-            onMouseLeave={() => setIsHovered(false)} 
             className={cn(
                 "h-9 min-w-32 overflow-hidden relative text-sm flex items-center justify-start border-neutral-700 py-1 px-3 border-[1px] flex-row gap-2 hover:bg-neutral-700/20 text-zinc-400 hover:text-zinc-200 rounded-full",
                 {
                     "bg-green-900/20 text-green-500 hover:bg-green-900/20 hover:text-green-500" : isClicked
                 }
             )}>
-            <CopyIcon isHovered={isHovered}/> 
+            <CopyIcon isClicked={isClicked}/> 
             <span className={cn(
                 "flex-1 pt-0.5 truncate absolute translate-x-6 transition-all duration-300",
                 {
