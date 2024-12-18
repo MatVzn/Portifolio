@@ -10,16 +10,11 @@ export function StatusButton() {
                 }}
             >
                 <div
+                    className="absolute top-[150%] left-[50%] w-[300%] h-[300%] blur-[30px]"
                     style={{
-                        position: 'absolute',
-                        top: '150%',
-                        left: '50%',
                         transform: 'translate(-50%, -50%) rotate(0deg)',
-                        width: '300%',
-                        height: '300%',
                         backgroundImage:
                             'conic-gradient(rgba(0,0,0,0), #6366f1, rgba(0,0,0,0) 25%)',
-                        filter: 'blur(30px)',
                         animation: 'rotate 4s linear infinite',
                     }}
                 ></div>
@@ -33,6 +28,9 @@ export function StatusButton() {
     );
 }
 
-{/* <span className="flex items-center justify-center bg-indigo-500 min-w-2 min-h-2 rounded-full">
-<span className="bg-indigo-500/70 min-w-2 min-h-2 rounded-full animate-ping"></span></span>  */}
+{/* 
+<span className="flex items-center justify-center bg-indigo-500 min-w-2 min-h-2 rounded-full">
+    <span className="bg-indigo-500/70 min-w-2 min-h-2 rounded-full animate-ping"></span>
+</span>  
+*/}
 {/* Tag <a> e depois <button> com href="#contact" aqui abaixo */}
