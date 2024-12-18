@@ -25,9 +25,10 @@ export function Footer() {
                 <p>Feito por&nbsp;</p>
                 <a 
                     href="https://github.com/MatVzn" 
-                    className="text-green-500 relative after:content-[''] after:absolute after:w-0 after:h-[1.5px] after:bg-green-500 after:bottom-1 after:left-0 after:transition-all after:duration-300 hover:after:w-full"
+                    className="relative text-green-500 transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-green-500 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-1 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-500 after:absolute after:bg-green-500 after:origin-center after:h-[1.5px] after:w-0 hover:after:w-[50%] after:bottom-1 after:right-[50%]"
                 >
-                    Matteo Vanzan</a>
+                    Matteo Vanzan
+                </a>
             </div>
         </footer>
     )
