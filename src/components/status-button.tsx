@@ -25,7 +25,7 @@ export function StatusButton() {
                 ></div>
             </div>
 
-            <div className="py-2 px-4 items-center justify-center flex flex-row gap-3 rounded-full text-indigo-500 bg-indigo-900/30 hover:bg-indigo-900/40 transition-all duration-200 relative z-10">
+            <div className="py-2 px-4 items-center justify-center flex flex-row gap-3 rounded-full text-indigo-500 bg-indigo-900/30 hover:bg-indigo-900/40 transition-all duration-200 relative z-0">
                 <RocketIcon />
                 <p className="line-clamp-1 text-base select-none">Working at GoMind</p>
             </div>
