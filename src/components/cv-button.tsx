@@ -3,7 +3,6 @@
 import { cn } from "@/lib/utils"
 import { ComponentProps, useState } from "react"
 import { DownloadIcon } from "../../public/animated-icons/download-icon";
-import { useEffect } from "react";
 
 interface CvButtonProps extends ComponentProps<'a'> {}
 

@@ -1,4 +1,7 @@
+'use client'
+
 import Image from "next/image";
+import { useState } from "react";
 
 interface TechCardProps {
     description: string
@@ -8,12 +11,20 @@ interface TechCardProps {
 }
 
 export function TechCard({ description, name, color, imgName }: TechCardProps) {
+    const [isHovered, setIsHovered] = useState(false)
+
     const style = {
-        '--border-color': color,
+        '--border-color': isHovered ? color : '#404040',
+        boxShadow: isHovered && `20px 10px 70px -25px ${color}`,
     } as React.CSSProperties;
 
     return (
-        <div style={style} className={`hover:border-[var(--border-color)] w-full max-h-[84px] gap-4 flex flex-row items-center justify-start p-4 bg-neutral-950 rounded-lg border-[1px] border-neutral-700 hover:bg-neutral-700/20 transition-all duration-200`}>
+        <div 
+            style={style} 
+            className="shadow-lg shadow-zinc-100/5 select-none border-[var(--border-color)] w-full max-h-[84px] gap-4 flex flex-row items-center justify-start p-4 bg-neutral-950 rounded-lg border-[1px] hover:bg-neutral-700/20 transition-all duration-700"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
             <Image
                 src={"/logos/" + imgName + ".png"}
                 alt={name + "-logo"}

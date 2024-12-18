@@ -1,3 +1,6 @@
+'use client'
+
+import { useEffect, useState } from "react";
 import { TechCard } from "./tech-card";
 
 const Techs = [
@@ -76,20 +79,17 @@ const Techs = [
 ]
 
 export function TechList() {
-    
-    return(
+    return (
         <div className='w-auto flex flex-col gap-4 items-center justify-center sm:grid sm:grid-cols-2 sm:justify-items-center xl:grid-cols-3 2xl:grid-cols-4'>
-            {Techs.map((tech) => (
-                <TechCard 
-                    key={tech.name} 
-                    name={tech.name} 
-                    description={tech.description} 
+            {Techs.map((tech, index) => (
+                <TechCard
+                    key={tech.name}
+                    name={tech.name}
+                    description={tech.description}
                     color={tech.color}
                     imgName={tech.imgName}
                 />
             ))}
         </div>
-        
-    )
-    
+    );
 }

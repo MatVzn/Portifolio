@@ -23,7 +23,11 @@ export function Footer() {
             </div>
             <div className="mt-6 flex flex-row text-zinc-200">
                 <p>Feito por&nbsp;</p>
-                <span className="text-green-500">Matteo Vanzan</span>
+                <a 
+                    href="https://github.com/MatVzn" 
+                    className="text-green-500 relative after:content-[''] after:absolute after:w-0 after:h-[1.5px] after:bg-green-500 after:bottom-1 after:left-0 after:transition-all after:duration-300 hover:after:w-full"
+                >
+                    Matteo Vanzan</a>
             </div>
         </footer>
     )

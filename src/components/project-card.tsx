@@ -22,7 +22,6 @@ export function ProjectCard({ name, description, imagePath, year, stack, pageLin
     let StackQuantity = stack.length
 
     const [isDescriptionOpen, setIsDescriptionOpen] = useState<boolean>(false)
-    const [isHovered, setIsHovered] = useState<boolean>(false)
     const [height, setHeight] = useState<string | number>('auto');
     const descriptionRef = useRef<HTMLParagraphElement>(null);
 
@@ -42,9 +41,7 @@ export function ProjectCard({ name, description, imagePath, year, stack, pageLin
 
     return (
         <div 
-          className='overflow-hidden h-auto transition-all duration-500 ease-in-out w-full bg-zinc-800/20 max-w-80 flex flex-col items-center rounded-3xl gap-5'
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+          className='shadow-lg hover:shadow-green-500/50 shadow-green-500/30 hover:translate-x-1 hover:-translate-y-1 overflow-hidden h-auto transition-all duration-500 ease-in-out w-full bg-zinc-800/20 max-w-80 flex flex-col items-center rounded-3xl gap-5'
         >
               
           <div className='object-cover relative overflow-hidden w-full h-44 rounded-t-3xl'>

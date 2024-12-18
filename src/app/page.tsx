@@ -13,11 +13,11 @@ import { ProjectList } from "../components/project-list";
 import { CvButton } from "../components/cv-button";
 import { EmailButton } from "../components/email-button";
 import { NavLink } from "../components/nav-link";
+import { StatusButton } from "../components/status-button";
 import { GripIcon } from "../../public/animated-icons/grip-icon";
 import { UserIcon } from "../../public/animated-icons/user-icon";
 import { AtSignIcon } from "../../public/animated-icons/at-sign-icon";
 import { GithubIcon } from "../../public/animated-icons/github-icon";
-import { RocketIcon } from "../../public/animated-icons/rocket";
 
 export default function Home() {
   return (
@@ -57,12 +57,12 @@ export default function Home() {
           <div className='min-h-[calc(100dvh-168px)] flex flex-col justify-between lg:min-h-[calc(100dvh-112px)] 2xl:pt-12'>
             <div className='flex flex-col gap-4 sm:gap-8 xl:justify-center'>
 
-              <div className="flex flex-col min-[350px]:flex-row justify-between items-start gap-4 xl:gap-8 2xl:px-12">
+              <div className="flex flex-col min-[350px]:flex-row justify-between items-start gap-8 xl:gap-8 2xl:px-12">
                 <div className='min-w-24 xl:min-w-80'>
                   <Image
                     src={MyPicture}
                     alt="My picture"
-                    className="rounded-md xl:hidden"
+                    className="shadow-md hover:shadow-green-500/50 shadow-green-500/30 rounded-md xl:hidden hover:translate-x-1 hover:translate-y-1 transition-all duration-500"
                     width={96}
                     height={96}
                     priority
@@ -70,7 +70,7 @@ export default function Home() {
                   <Image
                     src={MyPicture}
                     alt="My picture"
-                    className="hidden rounded-md xl:block"
+                    className="shadow-xl hover:shadow-green-500/50 shadow-green-500/30 hidden rounded-md xl:block hover:translate-x-1 hover:translate-y-1 transition-all duration-500"
                     width={320}
                     height={320}
                     priority
@@ -102,16 +102,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Tag <a> e depois <button> com href="#contact" aqui abaixo */}
-                <div className="w-auto min-w-[190px]">
-                  <div className="py-2 px-4 items-center justify-center flex flex-row gap-3 rounded-full text-indigo-500 bg-indigo-900/30 hover:bg-indigo-900/50 transition-all duration-200">
-                    {/* <span className="flex items-center justify-center bg-indigo-500 min-w-2 min-h-2 rounded-full">
-                      <span className="bg-indigo-500/70 min-w-2 min-h-2 rounded-full animate-ping"></span>
-                    </span>  */}
-                    <RocketIcon/>
-                    <p className='line-clamp-1 text-base select-none'>Working at GoMind</p>
-                  </div>
-                </div>
+                <StatusButton/>
               </div>
 
               <div className='flex flex-col gap-4 xl:hidden'>
