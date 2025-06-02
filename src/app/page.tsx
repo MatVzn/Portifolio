@@ -27,7 +27,7 @@ export default function Home() {
 
         <div className="h-32 border-b-[1px] border-neutral-700 items-start flex flex-col justify-center pl-7">
           <a href="/">
-            <h1 className="text-zinc-200 text-xl font-medium hover:text-green-500 transition-all duration-300">Matteo Vanzan</h1>
+            <h1 className="text-zinc-200 text-xl font-medium hover:text-sky-500 transition-all duration-300">Matteo Vanzan</h1>
           </a>
           <p className="text-zinc-400">Desenvoledor Front-End</p>
         </div>
@@ -62,7 +62,7 @@ export default function Home() {
                   <Image
                     src={MyPicture}
                     alt="My picture"
-                    className="shadow-md hover:shadow-green-500/50 shadow-green-500/30 rounded-md xl:hidden hover:translate-x-1 hover:translate-y-1 transition-all duration-500"
+                    className="shadow-md hover:shadow-sky-500/50 shadow-sky-500/30 rounded-md xl:hidden hover:translate-x-1 hover:translate-y-1 transition-all duration-500"
                     width={96}
                     height={96}
                     priority
@@ -70,7 +70,7 @@ export default function Home() {
                   <Image
                     src={MyPicture}
                     alt="My picture"
-                    className="shadow-xl hover:shadow-green-500/50 shadow-green-500/30 hidden rounded-md xl:block hover:translate-x-1 hover:translate-y-1 transition-all duration-500"
+                    className="shadow-xl hover:shadow-sky-500/50 shadow-sky-500/30 hidden rounded-md xl:block hover:translate-x-1 hover:translate-y-1 transition-all duration-500"
                     width={320}
                     height={320}
                     priority
@@ -80,7 +80,7 @@ export default function Home() {
                 <div className='hidden flex-col gap-4 xl:flex 2xl:text-left'>
                   <div>
                     <h1 className='text-3xl font-semibold'>Olá, eu sou o Matteo</h1>
-                    <p className='text-xl text-green-500'>Desenvolvedor Front-End</p>
+                    <p className='text-xl text-sky-500'>Desenvolvedor Front-End</p>
                   </div>
 
                   <p className='text-lg text-zinc-400'>
@@ -108,7 +108,7 @@ export default function Home() {
               <div className='flex flex-col gap-4 xl:hidden'>
                 <div>
                   <h1 className='text-3xl font-semibold'>Olá, eu sou o Matteo</h1>
-                  <p className='text-xl text-green-500'>Desenvolvedor Front-End</p>
+                  <p className='text-xl text-sky-500'>Desenvolvedor Front-End</p>
                 </div>
 
                 <p className='text-lg text-zinc-400'>

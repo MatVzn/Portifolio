@@ -1,6 +1,4 @@
 'use client'
-
-import { useEffect, useState } from "react";
 import { TechCard } from "./tech-card";
 
 const Techs = [
@@ -75,6 +73,18 @@ const Techs = [
         imgName: 'figma',
         description: "Design & Inspiração",
         color: "#A159F9"
+    },
+    {
+        name: "OpenAI",
+        imgName: 'openai',
+        description: "Inteligência Artificial",
+        color: "#FFF"
+    },
+    {
+        name: "N8N",
+        imgName: 'n8n',
+        description: "Workflow & automação",
+        color: "#E94A70"
     }
 ]
 

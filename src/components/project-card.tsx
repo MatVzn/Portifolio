@@ -101,7 +101,7 @@ export function ProjectCard({ name, description, imagePath, year, stack, pageLin
                 <span className="grid grid-cols-2 flex-grow gap-2">
                   {(StackQuantity % 2 === 0 ? 
                     stack.map((tech) => (
-                      <div className="rounded-full flex items-center justify-center bg-green-900/30 select-none hover:bg-green-900/50 transition-all duration-200 text-green-500 px-3 w-auto" key={tech}>
+                      <div className="rounded-full flex items-center justify-center bg-sky-900/30 select-none hover:bg-sky-900/50 transition-all duration-200 text-sky-500 px-3 w-auto" key={tech}>
                         {tech}
                       </div>
                     )) : (() => {
@@ -110,12 +110,12 @@ export function ProjectCard({ name, description, imagePath, year, stack, pageLin
                       while (x < StackQuantity) {
                         {x === StackQuantity - 1 
                           ? content.push(
-                            <div className="rounded-full flex col-span-2 items-center justify-center bg-green-900/30 select-none hover:bg-green-900/50 transition-all duration-200 text-green-500 px-3 w-auto" key={stack[x]}>
+                            <div className="rounded-full flex col-span-2 items-center justify-center bg-sky-900/30 select-none hover:bg-sky-900/50 transition-all duration-200 text-sky-500 px-3 w-auto" key={stack[x]}>
                               {stack[x]} {/* Última tech da lista */}
                             </div>
                           ) 
                           : content.push(
-                            <div className="rounded-full flex items-center justify-center bg-green-900/30 select-none hover:bg-green-900/50 transition-all duration-200 text-green-500 px-3 w-auto" key={stack[x]}>
+                            <div className="rounded-full flex items-center justify-center bg-sky-900/30 select-none hover:bg-sky-900/50 transition-all duration-200 text-sky-500 px-3 w-auto" key={stack[x]}>
                               {stack[x]}
                             </div>
                           ) 
