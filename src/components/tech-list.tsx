@@ -45,7 +45,7 @@ const Techs = [
         color: "#027BCD",
     },
     {
-        name: "Next.js",
+        name: "Next",
         imgName: 'nextjs',
         description: "Framework",
         color: "#FFF"
@@ -85,6 +85,12 @@ const Techs = [
         imgName: 'n8n',
         description: "Workflow & automação",
         color: "#E94A70"
+    },
+    {
+        name: "Nuxt",
+        imgName: 'nuxt',
+        description: "Framework",
+        color: "#54BC8B"
     }
 ]
 
