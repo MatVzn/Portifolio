@@ -54,7 +54,7 @@ export function ProjectCard({ name, description, imagePath, year, stack, pageLin
             />
           </div>
 
-          <div className='flex flex-col w-full px-6 pb-6 justify-between min-h-64'>
+          <div className='flex flex-col w-full px-6 pb-6 justify-between min-h-60'>
 
             <div>
               <div className="flex flex-row justify-between items-center">
@@ -94,9 +94,6 @@ export function ProjectCard({ name, description, imagePath, year, stack, pageLin
             
             
               <div className="flex flex-col gap-2 mb-4 mt-2">
-                <p className="flex items-center justify-center py-0.5 font-semibold text-base text-zinc-200 border-[1px] border-neutral-700 rounded-full">
-                  {year}
-                </p>
 
                 <span className="grid grid-cols-2 flex-grow gap-2">
                   {(StackQuantity % 2 === 0 ? 

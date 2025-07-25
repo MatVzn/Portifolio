@@ -3,21 +3,12 @@ import { ProjectCard } from "./project-card"
 
 const Projects = [
     {
-        name: "Menu Online",
-        description: "Projeto criado a partir de um curso online. Focado em criar um menu para pedidos online com o redirecionamento automático para o envio do pedido por Whatsapp.",
-        imagePath: "/projects/menuonline.jpg",
-        stack: ["HTML", "CSS", "Javascript", "jQuery", "Bootstrap"],
-        year: "2023",
-        pageLink: "https://matvzn.github.io/WebMenu/",
-        githubLink: "https://github.com/MatVzn/WebMenu"
-    },
-    {
-        name: "Mangá Dōjō",
-        description: "Liderando uma equipe de desenvolvedores de um projeto voluntário de tradução e divulgação de mangás. Foco em aprimorar minhas habilidades em React e Tailwind, além do constante desenvolvimento de novas features e manutenção do site.",
-        imagePath: "/projects/mangadojo.jpg",
-        stack: ["HTML", "React", "Next", "Tailwind"],
-        year: "2024",
-        pageLink: "none",
+        name: "GoMind website",
+        description: "Site criado para a empresa GoMind durante meu estágio. O Design do site foi feito por um UX designer e colocado em prática por mim utilizando o Figma.",
+        imagePath: "/projects/gomind.jpg",
+        stack: ["HTML", "CSS", "Vue.js", "Nuxt", "Tailwind", "Figma"],
+        year: "2025",
+        pageLink: "https://gomind.com.br/",
         githubLink: "none"
     },
     {
@@ -30,13 +21,22 @@ const Projects = [
         githubLink: "https://github.com/MatVzn/Checklist"
     },
     {
-        name: "GoMind website",
-        description: "Site criado para a empresa GoMind durante meu estágio. O Design do site foi feito por um UX designer e colocado em prática por mim utilizando o Figma.",
-        imagePath: "/projects/gomind.jpg",
-        stack: ["HTML", "CSS", "Vue.js", "Nuxt", "Tailwind", "Figma"],
-        year: "2025",
-        pageLink: "https://gomind.com.br/",
+        name: "Mangá Dōjō",
+        description: "Liderando uma equipe de desenvolvedores de um projeto voluntário de tradução e divulgação de mangás. Foco em aprimorar minhas habilidades em React e Tailwind, além do constante desenvolvimento de novas features e manutenção do site.",
+        imagePath: "/projects/mangadojo.jpg",
+        stack: ["HTML", "React", "Next", "Tailwind"],
+        year: "2024",
+        pageLink: "none",
         githubLink: "none"
+    },
+    {
+        name: "Menu Online",
+        description: "Projeto criado a partir de um curso online. Focado em criar um menu para pedidos online com o redirecionamento automático para o envio do pedido por Whatsapp.",
+        imagePath: "/projects/menuonline.jpg",
+        stack: ["HTML", "CSS", "Javascript", "jQuery", "Bootstrap"],
+        year: "2023",
+        pageLink: "https://matvzn.github.io/WebMenu/",
+        githubLink: "https://github.com/MatVzn/WebMenu"
     }
 ]
 

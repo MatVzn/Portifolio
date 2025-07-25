@@ -62,7 +62,7 @@ export default function Home() {
                   <Image
                     src={MyPicture}
                     alt="My picture"
-                    className="shadow-md hover:shadow-sky-500/50 shadow-sky-500/30 rounded-md xl:hidden hover:translate-x-1 hover:translate-y-1 transition-all duration-500"
+                    className="shadow-md shadow-sky-500/30 rounded-md xl:hidden transition-all duration-500"
                     width={96}
                     height={96}
                     priority
@@ -70,7 +70,7 @@ export default function Home() {
                   <Image
                     src={MyPicture}
                     alt="My picture"
-                    className="shadow-xl hover:shadow-sky-500/50 shadow-sky-500/30 hidden rounded-md xl:block hover:translate-x-1 hover:translate-y-1 transition-all duration-500"
+                    className="shadow-xl shadow-sky-500/30 hidden rounded-md xl:block transition-all duration-500"
                     width={320}
                     height={320}
                     priority
@@ -139,7 +139,7 @@ export default function Home() {
           
           <Line/>
 
-          <div id='projects' className='flex flex-col gap-8 items-center mb-10'>
+          <div id='projects' className='flex flex-col gap-12 items-center mb-10'>
             <Title>Projetos</Title>
               
             <ProjectList/>
@@ -147,7 +147,7 @@ export default function Home() {
 
           <Line/>
           
-          <div className='flex flex-col gap-8 items-center mb-10'>
+          <div className='flex flex-col gap-12 items-center mb-10'>
             <Title>Ferramentas</Title>
             
             <TechList/>
