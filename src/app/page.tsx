@@ -140,7 +140,7 @@ export default function Home() {
           <Line/>
 
           <div id='projects' className='flex flex-col gap-12 items-center mb-10'>
-            <Title>Projetos</Title>
+            <Title>Principais Projetos</Title>
               
             <ProjectList/>
           </div>
