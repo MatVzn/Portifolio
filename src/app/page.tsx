@@ -55,16 +55,16 @@ export default function Home() {
 
         <main className="h-auto flex flex-col px-6 pt-8 md:px-10">
           <div className='min-h-[calc(100dvh-168px)] flex flex-col justify-between lg:min-h-[calc(100dvh-112px)] 2xl:pt-12'>
-            <div className='flex flex-col gap-4 sm:gap-8 xl:justify-center'>
+            <div className='flex flex-col gap-4 sm:gap-8 xl:justify-start'>
 
-              <div className="flex flex-col min-[350px]:flex-row justify-between items-start gap-8 xl:gap-8 2xl:px-12">
+              <div className="flex flex-col min-[350px]:flex-row justify-start items-start gap-8 xl:gap-8 2xl:px-12">
                 <div className='min-w-24 xl:min-w-80'>
                   <Image
                     src={MyPicture}
                     alt="My picture"
                     className="shadow-md shadow-sky-500/30 rounded-md xl:hidden transition-all duration-500"
-                    width={96}
-                    height={96}
+                    width={150}
+                    height={150}
                     priority
                   />
                   <Image
@@ -77,7 +77,7 @@ export default function Home() {
                   />
                 </div>
                 
-                <div className='hidden flex-col gap-4 xl:flex 2xl:text-left'>
+                <div className='hidden flex-col gap-4 xl:flex xl:max-w-[35dvw] 2xl:text-left'>
                   <div>
                     <h1 className='text-3xl font-semibold'>Olá, eu sou o Matteo</h1>
                     <p className='text-xl text-sky-500'>Desenvolvedor Front-End</p>
