@@ -25,7 +25,7 @@ export function EmailButton({ } : EmailButtonProps) {
             className={cn(
                 "shadow-[1px_2px_8px_-6px#FFF] hover:shadow-[1px_2px_8px_-4px#FFF] h-9 min-w-32 overflow-hidden relative text-sm flex items-center justify-start border-neutral-700 py-1 px-3 border-[1px] flex-row gap-2 hover:bg-neutral-700/20 text-zinc-400 hover:text-zinc-200 rounded-full transition-all duration-200",
                 {
-                    "bg-sky-900/20 text-sky-500 hover:bg-sky-900/20 hover:text-sky-500" : isClicked
+                    "bg-orange-900/20 text-orange-500 hover:bg-orange-900/20 hover:text-orange-500" : isClicked
                 }
             )}>
             <CopyIcon isClicked={isClicked}/> 
