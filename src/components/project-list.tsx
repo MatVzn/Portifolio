@@ -8,7 +8,7 @@ const Projects = [
         imagePath: "/projects/gomind.jpg",
         stack: ["HTML", "CSS", "Vue.js", "Nuxt", "Tailwind", "Figma"],
         year: "2025",
-        pageLink: "https://gomind.com.br/",
+        pageLink: "none",
         githubLink: "none"
     },
     {
