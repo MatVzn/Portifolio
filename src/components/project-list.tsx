@@ -8,7 +8,7 @@ const Projects = [
         imagePath: "/projects/gomind.jpg",
         stack: ["HTML", "CSS", "Vue.js", "Nuxt", "Tailwind", "Figma"],
         year: "2025",
-        pageLink: "https://gomind.com.br/",
+        pageLink: "none",
         githubLink: "none"
     },
     {
@@ -17,7 +17,7 @@ const Projects = [
         imagePath: "/projects/checklist.jpg",
         stack: ["HTML", "CSS", "Javascript"],
         year: "2024",
-        pageLink: "https://matvzn.github.io/Checklist/",
+        pageLink: "none",
         githubLink: "https://github.com/MatVzn/Checklist"
     },
     {

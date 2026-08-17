@@ -84,7 +84,9 @@ export default function Home() {
                   </div>
 
                   <p className='text-lg text-zinc-400'>
-                    Atualmente estou estudando desenvolvimento web com foco front-end, criando interfaces responsivas e otimizadas. Tenho experiência em HTML, CSS, JavaScript, React e frameworks modernos. Sempre buscando melhorar a experiência do usuário.
+                    Desenvolvedor Full-Stack com foco front-end, criando interfaces responsivas e otimizadas. 
+                    Tenho experiência em HTML, CSS, JavaScript, React e frameworks modernos. 
+                    Sempre buscando melhorar a experiência do usuário.
                   </p>
 
                   <div className="flex flex-row gap-2">
