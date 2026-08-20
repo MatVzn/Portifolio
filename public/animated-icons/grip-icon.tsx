@@ -68,6 +68,7 @@ export function GripIcon({parentSelector}: GripIconProps) {
 
   return (
     <motion.div
+      initial="normal"
       className="cursor-pointer select-none p-2 hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center"
     >
       <svg

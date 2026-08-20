@@ -51,6 +51,7 @@ export function MenuIcon({isModalOpen}: MenuIconProps) {
         strokeLinejoin="round"
       >
         <motion.line
+          initial="normal"
           x1="4"
           y1="6"
           x2="20"
@@ -60,6 +61,7 @@ export function MenuIcon({isModalOpen}: MenuIconProps) {
           custom={1}
         />
         <motion.line
+          initial="normal"
           x1="4"
           y1="12"
           x2="20"
@@ -69,6 +71,7 @@ export function MenuIcon({isModalOpen}: MenuIconProps) {
           custom={2}
         />
         <motion.line
+          initial="normal"
           x1="4"
           y1="18"
           x2="20"

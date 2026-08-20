@@ -19,7 +19,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ name, description, imagePath, year, stack, pageLink, githubLink } : ProjectCardProps) {
 
-    let StackQuantity = stack.length
+    const StackQuantity = stack.length
 
     const [isDescriptionOpen, setIsDescriptionOpen] = useState<boolean>(false)
     const [height, setHeight] = useState<string | number>('auto');
@@ -103,7 +103,7 @@ export function ProjectCard({ name, description, imagePath, year, stack, pageLin
                       </div>
                     )) : (() => {
                       let x = 0;
-                      let content = []
+                      const content = []
                       while (x < StackQuantity) {
                         {x === StackQuantity - 1 
                           ? content.push(

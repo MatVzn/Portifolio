@@ -1,8 +1,5 @@
 import { ComponentProps, ReactNode } from "react"
 import Link from 'next/link'
-import { useState } from "react";
-import React from "react";
-
 interface LinkProps extends ComponentProps<'a'> {
     href: string
     children: ReactNode

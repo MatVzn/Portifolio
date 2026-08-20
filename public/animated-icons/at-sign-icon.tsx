@@ -101,6 +101,7 @@ export function AtSignIcon({ parentSelector }: AtSignIconProps) {
         strokeLinejoin="round"
       >
         <motion.circle
+          initial="normal"
           variants={circleVariants}
           animate={controls}
           cx="12"
@@ -108,6 +109,7 @@ export function AtSignIcon({ parentSelector }: AtSignIconProps) {
           r="4"
         />
         <motion.path
+          initial="normal"
           variants={pathVariants}
           animate={controls}
           d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"

@@ -69,6 +69,7 @@ export function UserIcon({ parentSelector }: UserIconProps) {
         strokeLinejoin="round"
       >
         <motion.circle
+          initial="normal"
           cx="12"
           cy="8"
           r="5"
@@ -81,6 +82,7 @@ export function UserIcon({ parentSelector }: UserIconProps) {
         />
 
         <motion.path
+          initial="normal"
           d="M20 21a8 8 0 0 0-16 0"
           variants={pathVariant}
           transition={{

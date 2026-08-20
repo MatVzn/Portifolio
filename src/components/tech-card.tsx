@@ -25,13 +25,15 @@ export function TechCard({ description, name, color, imgName }: TechCardProps) {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            <Image
-                src={"/logos/" + imgName + ".png"}
-                alt={name + "-logo"}
-                width={50}
-                height={50}
-                className="rounded-md"
-            />
+            <div className="relative w-[50px] h-[50px] shrink-0">
+                <Image
+                    src={"/logos/" + imgName + ".png"}
+                    alt={name + "-logo"}
+                    fill
+                    sizes="50px"
+                    className="rounded-md object-contain"
+                />
+            </div>
             <div className="flex-1 min-w-0">
                 <h3 className='capitalize text-zinc-200 font-bold text-lg'>
                     {name}

@@ -4,9 +4,7 @@ import { cn } from "@/lib/utils"
 import { ComponentProps, useState } from "react"
 import { DownloadIcon } from "../../public/animated-icons/download-icon";
 
-interface CvButtonProps extends ComponentProps<'a'> {}
-
-export function CvButton({ href, children, type, ...props } : CvButtonProps) {
+export function CvButton({ ...props }: ComponentProps<'a'>) {
 
     const [isClicked, setIsClicked] = useState(false);
     const [isHovered, setIsHovered] = useState(false)

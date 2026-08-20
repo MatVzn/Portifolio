@@ -4,9 +4,7 @@ import { cn } from "@/lib/utils";
 import { ComponentProps, useState } from "react"
 import { CopyIcon } from "../../public/animated-icons/copy-icon";
 
-interface EmailButtonProps extends ComponentProps<'button'> {}
-
-export function EmailButton({ } : EmailButtonProps) {
+export function EmailButton({ } : ComponentProps<'button'>) {
     
     const [isClicked, setIsClicked] = useState(false);
 

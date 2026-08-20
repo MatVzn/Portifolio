@@ -50,6 +50,7 @@ const RocketIcon = () => {
       className="cursor-pointer select-none p-2 hover:bg-accent rounded-md transition-colors duration-200 flex items-center justify-center"
     >
       <motion.svg
+        initial="normal"
         xmlns="http://www.w3.org/2000/svg"
         width="16"
         height="16"
@@ -63,6 +64,7 @@ const RocketIcon = () => {
         animate={"animate"}
       >
         <motion.path
+          initial="normal"
           d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"
           variants={fireVariants}
           animate={"animate"}

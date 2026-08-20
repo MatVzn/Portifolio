@@ -7,6 +7,7 @@ import { MenuIcon } from "../../public/animated-icons/menu-icon";
 import { UserIcon } from "../../public/animated-icons/user-icon";
 import { GripIcon } from "../../public/animated-icons/grip-icon";
 import { AtSignIcon } from "../../public/animated-icons/at-sign-icon";
+import Link from "next/link";
 
 export function Header() {
 
@@ -47,9 +48,9 @@ export function Header() {
 
         <header className="z-20 bg-neutral-950 fixed w-full h-[66px] top-0 pl-6 border-b-[1px] border-t-[1px] border-zinc-700 items-center justify-between flex flex-row lg:hidden">
             
-            <a href="/" className="text-xl text-center font-medium hover:text-green-500 transition-all duration-200">
+            <Link href="/" className="text-xl text-center font-medium hover:text-green-500 transition-all duration-200">
                 <h3>Matteo Vanzan</h3>
-            </a>
+            </Link>
 
             <div className="flex flex-row">
                 <button onClick={mobileModalSwitch} className="p-[18px] flex flex-col rounded-l-full fixed top-0 right-0 border-[1px] border-r-0 border-neutral-700 hover:bg-neutral-700/20 text-zinc-400 hover:text-zinc-200 transition-transform duration-200">

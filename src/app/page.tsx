@@ -1,5 +1,6 @@
 import Image from "next/image";
 import MyPicture from "@/../public/eu.jpg"
+import Link from "next/link";
 
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
@@ -26,9 +27,9 @@ export default function Home() {
       <aside className="hidden overflow-y-hidden lg:block w-60 h-full bg-neutral-950 z-20 border-r-[1px] border-neutral-700 fixed">
 
         <div className="h-32 border-b-[1px] border-neutral-700 items-start flex flex-col justify-center pl-7">
-          <a href="/">
+          <Link href="/">
             <h1 className="text-zinc-200 text-xl font-medium hover:text-green-500 transition-all duration-300">Matteo Vanzan</h1>
-          </a>
+          </Link>
           <p className="text-zinc-400">Desenvoledor Front-End</p>
         </div>
 
