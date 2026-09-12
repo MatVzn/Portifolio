@@ -137,8 +137,6 @@ export default function Home() {
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <ContactButton />
-          
             <Link
               href="/curriculo.pdf"
               download
@@ -146,14 +144,14 @@ export default function Home() {
               onMouseLeave={() => cvIconRef.current?.stopAnimation()}
               className={cn(
                 buttonVariants({ variant: "secondary", size: "lg" }),
-                "cursor-pointer pr-4 gap-2 rounded-full hover:bg-zinc-900 hover:text-white"
+                "order-1 cursor-pointer pr-4 gap-2 rounded-full hover:bg-zinc-900 hover:text-white sm:order-2"
               )}
             >
               Baixar currículo
               <DownloadIcon ref={cvIconRef} size={20} />
             </Link>
 
-            <div className="flex items-center gap-2">
+            <div className="order-2 flex items-center gap-2 sm:order-3">
               <Link
                 href="https://www.linkedin.com/in/matvzn/"
                 target="_blank"
@@ -179,6 +177,10 @@ export default function Home() {
               >
                 <GithubIcon size={18} />
               </Link>
+            </div>
+
+            <div className="order-3 w-full sm:order-1 sm:w-auto">
+              <ContactButton />
             </div>
           </div>
         </section>
