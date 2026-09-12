@@ -42,7 +42,7 @@ export default function Home() {
         />
       </div>
 
-      <div aria-hidden className="pointer-events-none fixed inset-0 z-0">
+      <div aria-hidden className="pointer-events-none fixed inset-0 z-0 hidden sm:block">
         <SideRays
           speed={2.5}
           rayColor1="#EAB308"
@@ -138,7 +138,7 @@ export default function Home() {
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <ContactButton />
-
+          
             <Link
               href="/curriculo.pdf"
               download
