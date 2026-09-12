@@ -160,8 +160,8 @@ export default function Home() {
                 rel="noreferrer"
                 aria-label="LinkedIn de Matteo Vanzan"
                 className={cn(
-                  buttonVariants({ variant: "default", size: "icon-lg" }),
-                  "size-11 cursor-pointer rounded-full border border-white hover:bg-white hover:text-black"
+                  buttonVariants({ variant: "default", size: "icon-sm" }),
+                  "size-10 cursor-pointer rounded-full border border-white hover:bg-white hover:text-black"
                 )}
               >
                 <LinkedinIcon size={18} />
@@ -173,8 +173,8 @@ export default function Home() {
                 rel="noreferrer"
                 aria-label="GitHub de Matteo Vanzan"
                 className={cn(
-                  buttonVariants({ variant: "default", size: "icon-lg" }),
-                  "size-11 cursor-pointer rounded-full border border-white hover:bg-white hover:text-black"
+                  buttonVariants({ variant: "default", size: "icon-sm" }),
+                  "size-10 cursor-pointer rounded-full border border-white hover:bg-white hover:text-black"
                 )}
               >
                 <GithubIcon size={18} />
