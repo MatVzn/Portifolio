@@ -13,11 +13,11 @@ import { cn } from "cn";
 import {
   ArrowDownIcon,
 } from "lucide-react";
-import ContactButton from "@/components/ui/ContactButton";
-import { buttonVariants } from "@/components/ui/Button";
+import ContactButton from "@/components/ContactButton";
 import { DownloadIcon, type DownloadIconHandle } from "@/components/ui/DownloadIcon";
 import { LinkedinIcon } from "@/components/ui/LinkedinIcon";
 import { GithubIcon } from "@/components/ui/GithubIcon";
+import { buttonVariants } from "@/components/ui/Button";
 
 const skills = ["React.js", "TypeScript", "CSS", "Tailwind", "Vue"];
 

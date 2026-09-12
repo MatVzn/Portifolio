@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { Button } from "./Button";
+import { Button } from "./ui/Button";
 import { CopyIcon, CheckIcon, XIcon } from "lucide-react";
 
 const EMAIL = "matteovoleite@gmail.com";
