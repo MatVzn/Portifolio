@@ -16,9 +16,16 @@ import { cn } from "cn";
 
 const EMAIL = "matteovoleite@gmail.com";
 const LABEL = "Entre em contato";
+const COPIED_LABEL = "Copiado com sucesso!";
+
 const EMAIL_CHARS = EMAIL.split("");
 const LABEL_CHARS = LABEL.split("");
-const MAX_CHARS = Math.max(EMAIL_CHARS.length, LABEL_CHARS.length);
+const COPIED_CHARS = COPIED_LABEL.split("");
+const MAX_CHARS = Math.max(
+  EMAIL_CHARS.length,
+  LABEL_CHARS.length,
+  COPIED_CHARS.length
+);
 
 const MORPH_DURATION = 0.75;
 const EASE = [0.33, 0, 0.2, 1] as const;
@@ -29,11 +36,15 @@ const INSTANT: Transition = { duration: 0 };
 const CHAR_DELAY = 0.05;
 const CHAR_STAGGER = (MORPH_DURATION * 0.7) / MAX_CHARS;
 
+const STAGGER_DIRECTION = -1;
+
 const ICON_SPACE = 32;
 const DOT_SPACE = 20;
 
 const PADDING_RIGHT_CLOSED = 20;
-const PADDING_RIGHT_OPEN = 16;
+const PADDING_RIGHT_OPEN = 12;
+
+const COPIED_RESET = 1500;
 
 const ICON_TRANSITION: Transition = {
   type: "spring",
@@ -74,6 +85,7 @@ export default function ContactButton() {
   const shellRef = useRef<HTMLDivElement>(null);
   const labelRulerRef = useRef<HTMLSpanElement>(null);
   const emailRulerRef = useRef<HTMLSpanElement>(null);
+  const copiedRulerRef = useRef<HTMLSpanElement>(null);
 
   const hovering = useRef(false);
   const animating = useRef(false);
@@ -87,7 +99,8 @@ export default function ContactButton() {
     const shell = shellRef.current;
     const labelRuler = labelRulerRef.current;
     const emailRuler = emailRulerRef.current;
-    if (!shell || !labelRuler || !emailRuler) return null;
+    const copiedRuler = copiedRulerRef.current;
+    if (!shell || !labelRuler || !emailRuler || !copiedRuler) return null;
 
     const style = getComputedStyle(shell);
     const extra =
@@ -95,9 +108,16 @@ export default function ContactButton() {
       parseFloat(style.borderLeftWidth) +
       parseFloat(style.borderRightWidth);
 
+    const openContent = Math.max(
+      emailRuler.getBoundingClientRect().width,
+      copiedRuler.getBoundingClientRect().width
+    );
+
     const inner = openState.current
-      ? emailRuler.getBoundingClientRect().width + ICON_SPACE + PADDING_RIGHT_OPEN
-      : labelRuler.getBoundingClientRect().width + DOT_SPACE + PADDING_RIGHT_CLOSED;
+      ? openContent + ICON_SPACE + PADDING_RIGHT_OPEN
+      : labelRuler.getBoundingClientRect().width +
+        DOT_SPACE +
+        PADDING_RIGHT_CLOSED;
 
     return Math.ceil(inner + extra);
   }, []);
@@ -127,6 +147,7 @@ export default function ContactButton() {
 
     if (labelRulerRef.current) observer.observe(labelRulerRef.current);
     if (emailRulerRef.current) observer.observe(emailRulerRef.current);
+    if (copiedRulerRef.current) observer.observe(copiedRulerRef.current);
 
     return () => {
       cancelled = true;
@@ -154,6 +175,12 @@ export default function ContactButton() {
       paddingControls.stop();
     };
   }, [isOpen, ready, measureTarget, width, paddingRight, prefersReducedMotion]);
+
+  useEffect(() => {
+    if (isOpen) return;
+    if (resetTimeout.current) clearTimeout(resetTimeout.current);
+    setCopied(false);
+  }, [isOpen]);
 
   useEffect(
     () => () => {
@@ -193,7 +220,7 @@ export default function ContactButton() {
       setCopied(true);
 
       if (resetTimeout.current) clearTimeout(resetTimeout.current);
-      resetTimeout.current = setTimeout(() => setCopied(false), 1500);
+      resetTimeout.current = setTimeout(() => setCopied(false), COPIED_RESET);
     } catch {
       setCopied(false);
     }
@@ -207,51 +234,53 @@ export default function ContactButton() {
   }
 
   const charsContainer: Variants = {
-    closed: {
-      transition: {
-        staggerChildren: prefersReducedMotion ? 0 : CHAR_STAGGER,
-        staggerDirection: -1,
-      },
-    },
-    open: {
+    visible: {
       transition: {
         delayChildren: prefersReducedMotion ? 0 : CHAR_DELAY,
         staggerChildren: prefersReducedMotion ? 0 : CHAR_STAGGER,
+        staggerDirection: STAGGER_DIRECTION,
+      },
+    },
+    hiddenUp: {
+      transition: {
+        staggerChildren: prefersReducedMotion ? 0 : CHAR_STAGGER,
+        staggerDirection: STAGGER_DIRECTION,
+      },
+    },
+    hiddenDown: {
+      transition: {
+        staggerChildren: prefersReducedMotion ? 0 : CHAR_STAGGER,
+        staggerDirection: STAGGER_DIRECTION,
       },
     },
   };
 
-  const emailChar: Variants = {
-    closed: {
-      opacity: 0,
-      y: 10,
-      filter: "blur(5px)",
-      transition: prefersReducedMotion ? INSTANT : CHAR_TRANSITION,
-    },
-    open: {
+  const charVariants: Variants = {
+    visible: {
       opacity: 1,
       y: 0,
       filter: "blur(0px)",
       transition: prefersReducedMotion ? INSTANT : CHAR_TRANSITION,
     },
-  };
-
-  const labelChar: Variants = {
-    closed: {
-      opacity: 1,
-      y: 0,
-      filter: "blur(0px)",
-      transition: prefersReducedMotion ? INSTANT : CHAR_TRANSITION,
-    },
-    open: {
+    hiddenUp: {
       opacity: 0,
       y: -10,
       filter: "blur(5px)",
       transition: prefersReducedMotion ? INSTANT : CHAR_TRANSITION,
     },
+    hiddenDown: {
+      opacity: 0,
+      y: 10,
+      filter: "blur(5px)",
+      transition: prefersReducedMotion ? INSTANT : CHAR_TRANSITION,
+    },
   };
 
-  const state = isOpen ? "open" : "closed";
+  const showCopied = isOpen && copied;
+
+  const labelState = isOpen ? "hiddenUp" : "visible";
+  const emailState = !isOpen ? "hiddenDown" : copied ? "hiddenUp" : "visible";
+  const copiedState = showCopied ? "visible" : "hiddenDown";
 
   return (
     <motion.div
@@ -259,7 +288,13 @@ export default function ContactButton() {
       tabIndex={0}
       role="button"
       aria-expanded={isOpen}
-      aria-label={isOpen ? `Copiar email ${EMAIL}` : LABEL}
+      aria-label={
+        showCopied
+          ? `Email ${EMAIL} copiado com sucesso`
+          : isOpen
+            ? `Copiar email ${EMAIL}`
+            : LABEL
+      }
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onFocus={() => setHover(true)}
@@ -302,39 +337,46 @@ export default function ContactButton() {
             </span>
           ))}
         </span>
+        <span ref={copiedRulerRef} className="flex text-sm font-normal">
+          {COPIED_CHARS.map((char, i) => (
+            <span key={`copied-ruler-${i}`} className="inline-block">
+              {nbsp(char)}
+            </span>
+          ))}
+        </span>
       </span>
 
       <motion.div
         aria-hidden={isOpen}
         variants={charsContainer}
         initial={false}
-        animate={state}
+        animate={labelState}
         className="pointer-events-none relative z-10 flex w-max items-center whitespace-nowrap text-base font-medium [grid-area:1/1]"
       >
-        <motion.span variants={labelChar} className="relative mr-3 flex size-2 shrink-0">
+        <motion.span variants={charVariants} className="relative mr-3 flex size-2 shrink-0">
           <span className="absolute inline-flex size-2 animate-ping rounded-full bg-green-500 motion-reduce:animate-none" />
           <span className="relative inline-flex size-2 rounded-full bg-green-500" />
         </motion.span>
 
         {LABEL_CHARS.map((char, i) => (
-          <motion.span key={`label-${i}`} variants={labelChar} className="inline-block">
+          <motion.span key={`label-${i}`} variants={charVariants} className="inline-block">
             {nbsp(char)}
           </motion.span>
         ))}
       </motion.div>
 
       <motion.div
-        aria-hidden={!isOpen}
+        aria-hidden={!isOpen || copied}
         variants={charsContainer}
         initial={false}
-        animate={state}
+        animate={emailState}
         className={cn(
           "pointer-events-none relative z-10 flex w-max items-center whitespace-nowrap text-sm font-normal text-zinc-200 [grid-area:1/1]",
           !ready && "w-0 overflow-hidden"
         )}
       >
         {EMAIL_CHARS.map((char, i) => (
-          <motion.span key={`email-${i}`} variants={emailChar} className="inline-block">
+          <motion.span key={`email-${i}`} variants={charVariants} className="inline-block">
             {char}
           </motion.span>
         ))}
@@ -380,6 +422,23 @@ export default function ContactButton() {
             </AnimatePresence>
           </span>
         </motion.span>
+      </motion.div>
+
+      <motion.div
+        aria-hidden={!showCopied}
+        variants={charsContainer}
+        initial={false}
+        animate={copiedState}
+        className={cn(
+          "pointer-events-none relative z-10 flex w-max items-center whitespace-nowrap text-sm font-normal text-green-500 [grid-area:1/1]",
+          !ready && "w-0 overflow-hidden"
+        )}
+      >
+        {COPIED_CHARS.map((char, i) => (
+          <motion.span key={`copied-${i}`} variants={charVariants} className="inline-block">
+            {nbsp(char)}
+          </motion.span>
+        ))}
       </motion.div>
     </motion.div>
   );
