@@ -1,169 +1,199 @@
-import Image from "next/image";
-import MyPicture from "@/../public/eu.jpg"
-import Link from "next/link";
+"use client";
 
-import { Footer } from "../components/footer";
-import { Header } from "../components/header";
-import { IconButton } from "../components/icon-button";
-import { LinkedinIcon } from "../../public/linkedin";
-import { ChevronDown } from "lucide-react";
-import { Line } from "../components/line";
-import { Title } from "../components/title";
-import { TechList } from "../components/tech-list";
-import { ProjectList } from "../components/project-list";
-import { CvButton } from "../components/cv-button";
-import { EmailButton } from "../components/email-button";
-import { NavLink } from "../components/nav-link";
-import { StatusButton } from "../components/status-button";
-import { GripIcon } from "../../public/animated-icons/grip-icon";
-import { UserIcon } from "../../public/animated-icons/user-icon";
-import { AtSignIcon } from "../../public/animated-icons/at-sign-icon";
-import { GithubIcon } from "../../public/animated-icons/github-icon";
+import { useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import MyPicture from "@/../public/eu.png";
+
+import Beams from "@/components/ui/Beams";
+import SideRays from "@/components/ui/SideRays";
+import TextType from "@/components/ui/TextType";
+import ShinyText from "@/components/ui/ShinyText";
+import { cn } from "cn";
+import {
+  ArrowDownIcon,
+} from "lucide-react";
+import ContactButton from "@/components/ui/ContactButton";
+import { buttonVariants } from "@/components/ui/Button";
+import { DownloadIcon, type DownloadIconHandle } from "@/components/ui/DownloadIcon";
+import { LinkedinIcon } from "@/components/ui/LinkedinIcon";
+import { GithubIcon } from "@/components/ui/GithubIcon";
+
+const skills = ["React.js", "TypeScript", "CSS", "Tailwind", "Vue"];
 
 export default function Home() {
+  const cvIconRef = useRef<DownloadIconHandle>(null);
+
   return (
-    <div className="flex flex-col lg:flex-row">
+    <main className="relative min-h-dvh w-full overflow-x-hidden bg-black text-white">
 
-      <aside className="hidden overflow-y-hidden lg:block w-60 h-full bg-neutral-950 z-20 border-r-[1px] border-neutral-700 fixed">
-
-        <div className="h-32 border-b-[1px] border-neutral-700 items-start flex flex-col justify-center pl-7">
-          <Link href="/">
-            <h1 className="text-zinc-200 text-xl font-medium hover:text-green-500 transition-all duration-300">Matteo Vanzan</h1>
-          </Link>
-          <p className="text-zinc-400">Desenvoledor Front-End</p>
-        </div>
-
-        <nav className="flex flex-col">
-          <NavLink id="aboutIcon" href="#about">
-            <UserIcon parentSelector="#aboutIcon"/>
-            Sobre
-          </NavLink>
-          <NavLink id="projectsButton" href="#projects">
-            <GripIcon parentSelector="#projectsButton"/>
-            Projetos
-          </NavLink>
-          <NavLink id="contactButton" href="#contact">
-            <AtSignIcon parentSelector="#contactButton"/>
-            Contato 
-          </NavLink>
-        </nav>
-
-      </aside>
-
-      <div className="flex flex-col lg:w-[calc(100dvw-240px)] lg:ml-60 overflow-x-hidden">
-
-        <Header/>
-
-        <main className="h-auto flex flex-col px-6 pt-8 md:px-10">
-          <div className='min-h-[calc(100dvh-168px)] flex flex-col justify-between lg:min-h-[calc(100dvh-112px)] 2xl:pt-12'>
-            <div className='flex flex-col gap-4 sm:gap-8 xl:justify-start'>
-
-              <div className="flex flex-col min-[350px]:flex-row justify-start items-start gap-8 xl:gap-8 2xl:px-12">
-                <div className='min-w-24 xl:min-w-80'>
-                  <Image
-                    src={MyPicture}
-                    alt="My picture"
-                    className="shadow-md shadow-green-500/30 rounded-md xl:hidden transition-all duration-500"
-                    width={150}
-                    height={150}
-                    priority
-                  />
-                  <Image
-                    src={MyPicture}
-                    alt="My picture"
-                    className="shadow-xl shadow-green-500/30 hidden rounded-md xl:block transition-all duration-500"
-                    width={320}
-                    height={320}
-                    priority
-                  />
-                </div>
-                
-                <div className='hidden flex-col gap-4 xl:flex xl:max-w-[35dvw] 2xl:text-left'>
-                  <div>
-                    <h1 className='text-3xl font-semibold'>Olá, eu sou o Matteo</h1>
-                    <p className='text-xl text-green-500'>Desenvolvedor Front-End</p>
-                  </div>
-
-                  <p className='text-lg text-zinc-400'>
-                    Desenvolvedor Full-Stack com foco front-end, criando interfaces responsivas e otimizadas. 
-                    Tenho experiência em HTML, CSS, JavaScript, React e frameworks modernos. 
-                    Sempre buscando melhorar a experiência do usuário.
-                  </p>
-
-                  <div className="flex flex-row gap-2">
-                    <CvButton/>
-                    <EmailButton/>
-                  </div>
-
-                  <div className='hidden sm:flex flex-row gap-2'>
-                    <IconButton id="githubButton1" href='https://github.com/MatVzn' target="_blank">
-                      <GithubIcon size={20} parentSelector="#githubButton1"/>
-                    </IconButton>  
-                    <IconButton href='https://www.linkedin.com/in/matvzn/' target="_blank">
-                      <LinkedinIcon/>
-                    </IconButton>
-                  </div>
-                </div>
-
-                <StatusButton/>
-              </div>
-
-              <div className='flex flex-col gap-4 xl:hidden'>
-                <div>
-                  <h1 className='text-3xl font-semibold'>Olá, eu sou o Matteo</h1>
-                  <p className='text-xl text-green-500'>Desenvolvedor Front-End</p>
-                </div>
-
-                <p className='text-lg text-zinc-400'>
-                  Atualmente estou estudando desenvolvimento web com foco front-end, criando interfaces responsivas e otimizadas. Tenho experiência em HTML, CSS, JavaScript, React e frameworks modernos. Sempre buscando melhorar a experiência do usuário.
-                </p>
-
-                <div className="flex flex-row gap-2">
-                  <CvButton/>
-                  <EmailButton/>
-                </div>
-
-                <div className='hidden sm:flex flex-row gap-4'>
-                  <IconButton id="githubButton2" href='https://github.com/MatVzn' target="_blank">
-                      <GithubIcon size={20} parentSelector="#githubButton2"/>
-                  </IconButton>  
-                  <IconButton href='https://www.linkedin.com/in/matvzn/' target="_blank">
-                      <LinkedinIcon/>
-                  </IconButton>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <a href="#projects" className='flex my-6 items-center justify-center xl:scale-150'>
-            <ChevronDown className='text-zinc-400 hover:text-zinc-200 transition-all duration-200 animate-bounce'/>
-          </a>
-          
-          <Line/>
-
-          <div id='projects' className='flex flex-col gap-12 items-center mb-10'>
-            <Title>Principais Projetos</Title>
-              
-            <ProjectList/>
-          </div>
-
-          <Line/>
-          
-          <div className='flex flex-col gap-12 items-center mb-10'>
-            <Title>Ferramentas</Title>
-            
-            <TechList/>
-          </div>
-
-          <Line/>
-        </main>
-
-        <Title>Entre em contato</Title>
-
-        <Footer/>
+      <div aria-hidden className="pointer-events-none fixed inset-0 z-0">
+        <Beams
+          beamWidth={3}
+          beamHeight={30}
+          beamNumber={20}
+          lightColor="#aaaaaa"
+          speed={2}
+          noiseIntensity={1.75}
+          scale={0.2}
+          rotation={30}
+          beamColor="#000000"
+          backgroundColor="#000000"
+        />
       </div>
 
-    </div>
-  )
+      <div aria-hidden className="pointer-events-none fixed inset-0 z-0">
+        <SideRays
+          speed={2.5}
+          rayColor1="#EAB308"
+          rayColor2="#96c8ff"
+          intensity={2}
+          spread={1}
+          origin="bottom-right"
+          tilt={0}
+          saturation={1.5}
+          blend={0.75}
+          falloff={1}
+          opacity={1}
+        />
+      </div>
+
+      <div className="relative z-10 mx-auto flex min-h-dvh w-full max-w-2xl flex-col px-6 py-10 sm:px-8">
+        <h1 className="sr-only">
+          Matteo Vanzan — Desenvolvedor Front-End
+        </h1>
+
+        <section className="flex flex-1 flex-col justify-center py-12">
+          <Image
+            src={MyPicture}
+            alt="Matteo Vanzan"
+            width={120}
+            height={120}
+            priority
+            className="size-20 rounded-full object-cover object-top transition-transform duration-300 hover:scale-105 sm:size-28"
+          />
+
+          <TextType
+            text={["Bem vindo ao meu portfólio!", "Matteo Vanzan"]}
+            typingSpeed={50}
+            pauseDuration={1000}
+            showCursor
+            cursorCharacter="|"
+            deletingSpeed={50}
+            cursorBlinkDuration={0.5}
+            loop={false}
+            className="mt-6 text-xl font-normal sm:mt-8 sm:text-2xl"
+          />
+
+          <div className="mt-4 flex flex-col gap-1 text-base text-zinc-300 sm:text-lg">
+            <p>
+              Desenvolvedor Front-End que transforma ideias em experiências visuais.
+            </p>
+            <p>
+              Foco em design, experiência do usuário e na construção de produtos digitais, 
+              sempre buscando equilíbrio entre estética e funcionalidade.
+            </p>
+            <p>
+              Trabalhando atualmente na&nbsp;
+              <Link
+                href="https://www.sesatech.com.br"
+                target="_blank"
+                rel="noreferrer"
+                className="cursor-pointer rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              >
+                <ShinyText
+                  text="Sesatech ⚡"
+                  speed={2.3}
+                  delay={0.5}
+                  color="#7CDB86"
+                  shineColor="#ffffff"
+                  spread={120}
+                  direction="left"
+                  yoyo={false}
+                  pauseOnHover={false}
+                  disabled={false}
+                />
+              </Link>
+            </p>
+          </div>
+
+          <div className="mt-8 flex flex-col gap-2">
+            <h2 className="text-lg font-normal sm:text-xl">
+              Principais habilidades
+            </h2>
+            <ul className="flex flex-row flex-wrap items-center gap-x-2 gap-y-1 text-base text-zinc-400 sm:text-lg">
+              {skills.map((skill, i) => (
+                <li key={skill} className="flex items-center gap-2">
+                  {i > 0 && (
+                    <span
+                      aria-hidden
+                      className="inline-block size-1 rounded-full bg-zinc-500"
+                    />
+                  )}
+                  {skill}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <ContactButton />
+
+            <Link
+              href="/curriculo.pdf"
+              download
+              onMouseEnter={() => cvIconRef.current?.startAnimation()}
+              onMouseLeave={() => cvIconRef.current?.stopAnimation()}
+              className={cn(
+                buttonVariants({ variant: "secondary", size: "lg" }),
+                "cursor-pointer pr-4 gap-2 rounded-full hover:bg-zinc-900 hover:text-white"
+              )}
+            >
+              Baixar currículo
+              <DownloadIcon ref={cvIconRef} size={20} />
+            </Link>
+
+            <div className="flex items-center gap-2">
+              <Link
+                href="https://www.linkedin.com/in/matvzn/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn de Matteo Vanzan"
+                className={cn(
+                  buttonVariants({ variant: "default", size: "icon-lg" }),
+                  "size-11 cursor-pointer rounded-full border border-white hover:bg-white hover:text-black"
+                )}
+              >
+                <LinkedinIcon size={18} />
+              </Link>
+
+              <Link
+                href="https://github.com/MatVzn"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub de Matteo Vanzan"
+                className={cn(
+                  buttonVariants({ variant: "default", size: "icon-lg" }),
+                  "size-11 cursor-pointer rounded-full border border-white hover:bg-white hover:text-black"
+                )}
+              >
+                <GithubIcon size={18} />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* <Link
+          href="#projetos"
+          className="mx-auto flex items-center gap-2 rounded-full px-4 py-2 text-sm text-zinc-400 transition-colors duration-300 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:text-base"
+        >
+          Ver meus projetos
+          <ArrowDownIcon
+            size={16}
+            className="animate-bounce motion-reduce:animate-none"
+          />
+        </Link> */}
+      </div>
+    </main>
+  );
 }
