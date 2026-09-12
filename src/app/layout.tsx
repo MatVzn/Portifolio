@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 import { Catamaran, Geist } from 'next/font/google'
@@ -20,6 +20,13 @@ export const metadata: Metadata = {
   icons: {
     icon: ['/favicon.ico'],
   },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: '#09090b',
 }
 
 export default function RootLayout({

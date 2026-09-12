@@ -58,7 +58,15 @@ export default function Home() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-dvh w-full max-w-2xl flex-col px-6 py-10 sm:px-8">
+      <div
+        className="relative z-10 mx-auto flex min-h-dvh w-full max-w-2xl flex-col px-6 py-10 sm:px-8"
+        style={{
+          paddingTop: "max(2.5rem, env(safe-area-inset-top))",
+          paddingBottom: "max(2.5rem, env(safe-area-inset-bottom))",
+          paddingLeft: "max(1.5rem, env(safe-area-inset-left))",
+          paddingRight: "max(1.5rem, env(safe-area-inset-right))",
+        }}
+      >
         <h1 className="sr-only">
           Matteo Vanzan — Desenvolvedor Front-End
         </h1>
